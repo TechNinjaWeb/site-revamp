@@ -181,8 +181,8 @@ nav { z-index: 2; }
 }
 
 .slider .slide .title {
-	font-size: 60px;
-	line-height: 70px;
+	font-size: 6vw;
+	line-height: 56px;
     color: #AFBCFF;
     -webkit-text-stroke: 0.5px #5A76AC;
 }
@@ -190,7 +190,7 @@ nav { z-index: 2; }
 .slider .slide .title-bold {
     display: block;
     color: #768BFF;
-	font-size: 70px;
+	font-size: 6vw;
 }
 
 .slider .slide .caption {
