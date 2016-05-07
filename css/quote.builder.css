@@ -1,0 +1,146 @@
+.quote-box .input-grouping label {
+  position: relative;
+  margin-top: 5px;
+}
+
+.quote-box .input:nth-child(2) {
+  margin-left: 18px;
+}
+
+.quote-box input.logo-design,
+.quote-box input.business-cards,
+.quote-box input.corporate-materials,
+.quote-box input.dynamic-content,
+.quote-box input.photo-gallery,
+.quote-box input.template-discount,
+.quote-box input.mobile-ready,
+.quote-box input.seo-management,
+.quote-box input.android-app,
+.quote-box input.ios-app,
+.quote-box input.desktop-app {
+  position: relative;
+  display: none;
+}
+
+.quote-box input.logo-design-checkbox,
+.quote-box input.business-cards-checkbox,
+.quote-box input.corporate-materials-checkbox input.dynamic-content-checkbox,
+.quote-box input.photo-gallery-checkbox,
+.quote-box input.template-discount-checkbox,
+.quote-box input.mobile-ready-checkbox,
+.quote-box input.seo-management-checkbox,
+.quote-box input.android-app-checkbox,
+.quote-box input.ios-app-checkbox,
+.quote-box input.desktop-app-checkbox {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 20px;
+}
+
+.quote-box .output-container {
+  position: relative;
+  margin-left: 20px;
+  min-height: 142px;
+}
+.quote-box .output {
+  width: 100%;
+  height: 100%;
+  color: #cfd6d9;
+  font-size: 100px;
+}
+
+.quote-box  span.dollar-span {
+  position: absolute;
+  top: 0;
+  /*margin-top: 100px;*/
+  color: #cfd6d9;
+  font-size: 40px;
+  display: none;
+}
+
+.quote-box .output {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.quote-box .panel input[type=checkbox] {
+  visibility: hidden;
+}
+
+.quote-box .panel .input-grouping {
+  position: relative;
+}
+
+.quote-box .input-grouping label.special-checkbox {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #585858;
+  border-radius: 2px;
+  
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: -3px;
+  left: -28px;
+
+  background: #2A2A2A;
+}
+
+.quote-box input[type="number"]:disabled {
+  color: #317157;
+}
+
+.quote-box .input-grouping input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+.quote-box .input-grouping input[type=checkbox]:checked + label:before { content: "\f00c"; color: #2AE891; } /* checked icon */
+.quote-box .input-grouping input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
+
+
+.quote-box .panel-default {
+  font-family: 'PT Sans';
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.quote-box .panel-default span {
+  font-weight: 100;
+}
+
+.quote-box .panel-default > .panel-heading {
+  height: 60px;
+  color: #fff;
+  background-color: #2A2A2A;
+  border: 1px solid #4E4E4E;
+  border-radius: 2px;
+}
+
+.quote-box .panel-heading {
+  padding: 10px 15px;
+  border: 1px solid #333333;
+  border-radius: 2px;
+}
+.quote-box .panel-title {
+  margin-top: 9px;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: inherit;
+}
+
+.quote-box h3.quote-box-title {
+  color: white;
+  margin-bottom: 29px;
+}
+
+/*.panel-group .panel-heading {
+    border-bottom: 0;
+}*/
+.quote-box .panel-group .panel-heading+.panel-collapse>.panel-body {
+  border: none;
+}
