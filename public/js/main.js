@@ -95,7 +95,7 @@ function toggleSlider( state ) {
 	if (state == 'off') $('.slider .slide').fadeOut();
 }
 
-function sendMessage() {
+function getInputs() {
 	var form = $('.contact-box .form-container'),
 		inputs = form.find('input'),
 		message = form.find('textarea');
@@ -104,6 +104,8 @@ function sendMessage() {
 	var results = all.map(function(i, e){ return e.value; });
 
 	console.log("Results", results);
+
+	return results;
 }
 
 

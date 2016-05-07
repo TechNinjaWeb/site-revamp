@@ -1,89 +1,132 @@
-var app = angular.module('backand.service', [
-	'backand', 
-	'backand.service.interceptors'
+var app = angular.module('app', [
+		'backand', 
+		'auth.service',
+		'login.ctrl',
+		'ui.router',
+		'backend.constants'
 	])
-    .config(function(BackandProvider, $httpProvider) {
-        console.warn("BackandProvider", BackandProvider, $httpProvider);
+  .controller('main', function($scope, $http, Backand, CONSTANTS) {
+    $http.defaults.headers.common.anonymousToken = CONSTANTS.anonymousToken;
 
-        $httpProvider.interceptors.push('BackandInterceptor');
-        BackandProvider.setAppName('techninja');
-        BackandProvider.setSignUpToken('e311d36c-5d65-4514-b68c-670a98b1f516');
-        BackandProvider.setAnonymousToken('ba8fa7e5-633d-48a2-be11-a01aa0283793');
-    })
-    .service('BackandService', function dataService($http, Backand) {
-	    var self = window.DataService = this;
-	    console.log("Self", self);
-	    var baseUrl = '/1/objects/';
+    $scope.message = "Loaded";
+    $scope.appCtrl = $scope;
+    
+    var self = window.SCOPE = this;
 
-	    self.name = null;
+    var self = this;
+    var baseUrl = Backand.getApiUrl() + '/1/objects/';
 
-	    self.readAll = function() {
-	        return $http({
-	            method: 'GET',
-	            url: Backand.getApiUrl() + baseUrl + self.name
-	        }).then(function(response) {
-	            return response.data.data;
-	        });
-	    };
+    var objectName = 'leads';
 
-	    self.readOne = function(id) {
-	        return $http({
-	            method: 'GET',
-	            url: Backand.getApiUrl() + baseUrl + self.name + '/' + id
-	        }).then(function(response) {
-	            return response.data;
-	        });
-	    };
+    self.readAll = function () {
+        return $http({
+            method: 'GET',
+            url: baseUrl + objectName
+        }).then(function(response) {
+            return response.data.data;
+        });
+    };
 
-	    self.create = function(data) {
-	        return $http({
-	            method: 'POST',
-	            url: Backand.getApiUrl() + baseUrl + self.name,
-	            data: data,
-	            params: {
-	                returnObject: true
-	            }
-	        }).then(function(response) {
-	            return response.data;
-	        });
-	    };
+    self.readOne = function (id) {
+        return $http({
+            method: 'GET',
+            url: baseUrl + objectName + '/' + id
+        }).then(function(response) {
+            return response.data;
+        });
+    };
 
-	    self.update = function(id, data) {
-	        return $http({
-	            method: 'PUT',
-	            url: Backand.getApiUrl() + baseUrl + self.name + '/' + id,
-	            data: data
-	        }).then(function(response) {
-	            return response.data;
-	        });
-	    };
+    self.create = function (description) {
+        return $http({
+            method: 'POST',
+            url : baseUrl + objectName,
+            data: {
+                description: description
+            },
+            params: {
+                returnObject: true
+            }
+        }).then(function(response) {
+            return response.data;
+        });
+    };
 
-	    self.delete = function(id) {
-	        return $http({
-	            method: 'DELETE',
-	            url: Backand.getApiUrl() + baseUrl + self.name + '/' + id
-	        })
-	    };
+    self.update = function (id, data) {
+        return $http({
+            method: 'PUT',
+            url : baseUrl + objectName + '/' + id,
+            data: data
+        }).then(function(response) {
+            return response.data;
+        });
+    };
 
-	    self.logout = function() {
-	        Backand.signout();
-	    }
+    self.delete = function (id) {
+        return $http({
+            method: 'DELETE',
+            url : baseUrl + objectName + '/' + id
+        })
+    };
 
-	    //get the object name and optional parameters
-		self.getList = function(name, sort, filter) {
-		    return $http({
-		        method: 'GET',
-		        url: Backand.getApiUrl() + '/1/objects/' + name,
-		        params: {
-		            pageSize: 20,
-		            pageNumber: 1,
-		            filter: filter || '',
-		            sort: sort || ''
-		        }
-		    });
-		};
-	}).run(function(BackandService){
+    self.signin = function (username, password) {
+        return Backand.signin(username, password)
+            .then(function (response) {
+                loadUserDetails();
+                return response;
+            });
+    };
 
+    self.saveForm = function () {
+        var inputs = getInputs();
+        return $http({
+            method: 'POST',
+            url : baseUrl + objectName,
+            data: {
+                fullname: inputs[0],
+                email: inputs[1],
+                subject: inputs[2],
+                message: inputs[3]
+            },
+            params: {
+                returnObject: true
+            }
+        }).then(function(response) {
+            return response.data;
+        });
+    };
+
+    angular.extend($scope, self);
+  });
+
+app.config(function($stateProvider, $urlRouterProvider, BackandProvider, CONSTANTS) {
+	BackandProvider.setAppName(CONSTANTS.appname);
+	BackandProvider.setSignUpToken(CONSTANTS.signupToken);
+	BackandProvider.setAnonymousToken(CONSTANTS.annonymousToken);
+
+	BackandProvider.runSigninAfterSignup(true);
+
+	$stateProvider.state('home', {
+		abstract: true,
+		controller: 'LoginController',
+		template: '<div ui-view="home"></div>'
+	})
+	.state('home.index', {
+		url: '/',
+		views: {
+			'home@home': {
+				templateUrl: './app/views/home.tpl.html',
+				controller: 'main'
+			}
+		}
 	});
 
-angular.bootstrap(document, ['backand.service'])
+	$urlRouterProvider.otherwise('/');
+});
+
+app.run(function($rootScope, Backand, AuthService){
+	console.log("App Running", $rootScope);
+
+	window.BackAnd = Backand;
+	window.AuthService = AuthService;
+})
+angular.bootstrap(document, [app.name]);
