@@ -22,9 +22,9 @@ function toggleBg( element )  {
 	if (yPos < 20 && !enabled) setBg( element, 'transparent', 'off' ), enabled = true; 
 		// console.log("Less than 100");
 
-	if (yPos >= winHeight && !dropped) setPosition( element, 'on'); 
+	if (yPos >= winHeight + 50 && !dropped) setPosition( element, 'on'); 
 		// console.log("Greater than window");
-	if (yPos < winHeight && dropped) setPosition( element, 'off'); 
+	if (yPos < winHeight + 50 && dropped) setPosition( element, 'off'); 
 		// console.log("Less than than window");
 }
 
@@ -94,3 +94,126 @@ function toggleSlider( state ) {
 	if (state == 'on') $('.slider .slide').fadeIn();
 	if (state == 'off') $('.slider .slide').fadeOut();
 }
+
+function sendMessage() {
+	var form = $('.contact-box .form-container'),
+		inputs = form.find('input'),
+		message = form.find('textarea');
+
+	var all = $.merge( inputs, message );
+	var results = all.map(function(i, e){ return e.value; });
+
+	console.log("Results", results);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var Backand = function(Class, options) {
+// 	if(!options) options = {};
+// 	this.appname = options.appname || 'techninja'
+// 	// init backand url
+//     backand.options.url = options.url || "https://api.backand.com:8080";
+	
+// 	this.defaultCallback = options.callback || {
+// 		success: function(res){
+// 			res.forEach(function(e){ this.results.push(e); });
+// 			return res;
+// 		},
+// 		error: function(err, res){
+// 			this.err = {err: err, res: res}
+// 			return this.err;
+// 		},
+// 		results: [],
+// 		err: null
+// 	};
+
+// 	this.filter = options.filter || [];
+// 	this.sort = options.sort || null;
+// 	this.search = options.search || null;
+// 	this.deep = options.deep || true;
+// 	this.pageNum = options.pageNum || 1;
+// 	this.pageSize = options.pageSize || 10;
+// };
+// Backand.prototype = function() {};
+
+// Backand.prototype.filter = function(condition, bool) {
+	
+// 	if (!bool) this.filter = conditions;
+// 	this.filter = this.filter || [];
+// 	this.filter.push( condition );
+// };
+
+// Backand.prototype.sort = function(condition, bool) {
+// 	if (!bool) this.filter = conditions;
+// 	this.filter = this.filter || [];
+// 	this.filter.push( condition );
+// };
+
+// Backand.prototype.search = function(condition, bool) {
+// 	if (!bool) this.search = conditions;
+// 	this.search = this.search || [];
+// 	this.search.push( condition );
+// };
+
+// Backand.prototype.login = function(username, password, cb) {
+// 	if(!username || !password) return "You must Enter Username or Password";
+
+// 	backand.security.authentication.login(username, password, this.appname, cb.success, cb.error);
+// };
+
+
+// Backand.prototype.getUsers = function(cb) {
+// 	this.uri = 'users';
+// 	this.results = [];
+// 	this.err = null;
+	
+// 	var url = this.baseUrl + this.uri
+	
+// 	this.defaultCallback = {
+// 		success: function(res){
+// 			res.forEach(function(e){ this.results.push(e); });
+// 			return res;
+// 		},
+// 		error: function(err, res){
+// 			this.err = {err: err, res: res}
+// 			return this.err;
+// 		},
+// 		results: [],
+// 		err: null
+// 	}
+// 	this.call( url, 'GET', cb || this.defaultCallback )
+// }
+// cb = {};
+// cb.success = function(res){console.info(res)};
+// cb.error = function(err, res){console.error(err, res)};
+// Backand.prototype.call = function( url, method, cb ) {
+// 	return $.ajax({
+// 		url: url,
+// 		method: method,
+// 		headers: {
+// 			'Content-Type': 'application/json;charset=utf8',
+// 			'info': 'ba8fa7e5-633d-48a2-be11-a01aa0283793'
+// 		},
+// 		success: cb.success,
+// 		error: cb.error,
+// 		data: {
+// 			pageSize: 20, 
+// 			pageNumber: 1
+// 		}
+// 	})
+// }
+
+// var server = new Backand();
