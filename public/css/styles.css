@@ -117,8 +117,8 @@ nav { z-index: 2; }
 }
 
 .navigation .navbar-brand {
+    position: absolute;
     font-size: 50px;
-    position: relative;
 }
 
 .navigation .logo {
@@ -142,7 +142,8 @@ nav { z-index: 2; }
 }
 
 .navigation li {
-    margin-right: 28px;
+    margin-right: 20px;
+    font-size: 2vw;
 }
 
 .navigation li:last-child {
@@ -390,7 +391,7 @@ nav { z-index: 2; }
 
 .testimonials .testimonials-container {
     position: relative;
-    margin: 5px 50px;
+    /*margin: 5px 50px;*/
 }
 
 .testimonials .nav-left, .testimonials .nav-right {
@@ -512,10 +513,10 @@ nav { z-index: 2; }
     z-index: -1;
 }
 
-.contact .flex-container > div {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
+.contact .message, .contact .phone-box {
+    padding-left: 50px;
+    /*margin-right: 50px;*/
+    /*margin-bottom: 50px;*/
 }
 
 .contact:after {
@@ -628,7 +629,7 @@ nav { z-index: 2; }
 
 .phone-box .contact-box {
     margin-top: 100px;
-    margin-left: 18%;
+    /*margin-left: 18%;*/
 }
 
 .form-container .input-group {
