@@ -78,7 +78,7 @@ var app = angular.module('app', [
 
     self.saveForm = function () {
         var inputs = getInputs();
-        return $http({
+        /* $http({
             method: 'POST',
             url : baseUrl + objectName,
             data: {
@@ -92,8 +92,14 @@ var app = angular.module('app', [
             }
         }).then(function(response) {
             return response.data;
-        });
+        }); */
+        // Send inputs back
+        return inputs;
     };
+
+    self.clearForm = function() {
+    	clearForm();
+    }
 
     angular.extend($scope, self);
   });
@@ -105,20 +111,31 @@ app.config(function($stateProvider, $urlRouterProvider, BackandProvider, CONSTAN
 
 	BackandProvider.runSigninAfterSignup(true);
 
-	$stateProvider.state('home', {
-		abstract: true,
-		controller: 'LoginController',
-		template: '<div ui-view="home"></div>'
-	})
-	.state('home.index', {
-		url: '/',
-		views: {
-			'home@home': {
-				templateUrl: './app/views/home.tpl.html',
-				controller: 'main'
-			}
-		}
-	});
+	// $stateProvider.state('home', {
+	// 	abstract: true,
+	// 	controller: 'LoginController',
+	// 	template: '<div ui-view="home"></div>'
+	// })
+	// .state('home.index', {
+	// 	url: '/',
+	// 	views: {
+	// 		'home@home': {
+	// 			template: '<button class="signIn" ng-click="getLeads()">Sign In</button><br><br><br>'
+	// 			 + '<div>{{ message }}</div>',
+	// 			controller: 'main'
+	// 		}
+	// 	}
+	// });
+
+	// .state('home.index', {
+	// 	url: '/',
+	// 	views: {
+	// 		'home@home': {
+	// 			templateUrl: './app/views/home.tpl.html'
+	// 			controller: 'main'
+	// 		}
+	// 	}
+	// });
 
 	$urlRouterProvider.otherwise('/');
 });

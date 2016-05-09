@@ -8,6 +8,15 @@ body {
 	background-color: white;
 }
 
+.hidden {
+    display: none;
+    visibility: none;
+}
+
+.show {
+    display: block;
+    visibility: visible;
+}
 
 .inner {
     position: relative;
@@ -77,6 +86,10 @@ body {
     text-shadow: 1px 0px 0px rgba(0,0,0,0.4), 0 0 0 rgba(0,0,0,0.4), 1px 0px 0px rgba(0,0,0,0.4);
 }
 
+.scale-anm {
+  transform: scale(1);
+}
+
 .learn-more {
     background-color: transparent;
     border: 1px solid #fff;
@@ -100,7 +113,7 @@ body {
 	font-size: 30px;
 }
 
-nav { z-index: 2; }
+nav { z-index: 5; }
 
 .navbar {
 	margin: 0 auto;
@@ -216,21 +229,26 @@ nav { z-index: 2; }
 
 .services {
     position: relative;
+    height: 74vh;
 	background-color: #5E5E5E;
-	overflow-x: hidden;
+    overflow: hidden;
 }
 
 .services .navbar {
     position: absolute;
     right: 0;
     top: 0;
-    width: 100%;
+    width: inherit;
     height: 90px;
     background-color: transparent;
     z-index: 0;
 }
 
 .services .nav-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 90px;
     background-color: #2F2F2F;
 }
@@ -324,6 +342,7 @@ nav { z-index: 2; }
 .portfolio li.portfolio-link {
     font-size: 14px;
     border: 1px solid #fff;
+    z-index: 2;
 }
 
 .portfolio li.portfolio-link:hover {
@@ -331,25 +350,44 @@ nav { z-index: 2; }
     border: 1px solid #fff;
 }
 
-.portfolio .navbar-nav > li > a {
+.portfolio .navbar-nav > li > a,
+.portfolio .navbar-nav > li > button,
+.portfolio .navbar-nav .btn {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 30px;
     padding-right: 30px;
     color: #fff;
+    background-color: transparent;
 }
 
-.portfolio .navbar.navbar-default .navbar-nav > .active > a {
+.portfolio .navbar-nav > li > a:focus,
+.portfolio .navbar-nav > li > button:focus,
+.portfolio .navbar-nav .btn:focus {
+    outline: none;
+}
+
+.portfolio .navbar.navbar-default .navbar-nav > .active > a,
+.portfolio .navbar.navbar-default .navbar-nav > .active > button,
+.portfolio .navbar.navbar-default .navbar-nav > .active > .btn {
     background-color: #839ACF;
     color: #000;
 }
 
-.portfolio .navbar.navbar-default .navbar-nav > .active > a:hover {
+.portfolio .navbar.navbar-default .navbar-nav > .active > a:hover, 
+.portfolio .navbar.navbar-default .navbar-nav > .active > button:hover,
+.portfolio .navbar.navbar-default .navbar-nav > .active > .btn:hover {
     color: #fff;
 }
 
-.portfolio .navbar.navbar-default .navbar-nav a:hover {
+.portfolio .navbar.navbar-default .navbar-nav a:hover, 
+.portfolio .navbar.navbar-default .navbar-nav button:hover,
+.portfolio .navbar.navbar-default .navbar-nav .btn:hover {
     color: #fff;
+}
+
+.portfolio .portfolio-item {
+    margin-bottom: 20px;
 }
 
 .portfolio .special-title {
@@ -554,12 +592,25 @@ nav { z-index: 2; }
 	font-size: 18px;
 }
 
-.contact .message .social-media {
+.contact .social-media {
 	margin-top: 50px;
 	font-size: 1.5em;
 }
+.contact .social-media button {
+    width: 67px;
+    background-color: transparent;
+    border: none;
+}
 
-.social-media i {
+.contact .social-media button:hover {
+    color: #839ACF;
+}
+
+.contact .social-media button:focus {
+    outline: none;
+}
+
+.contact .social-media i {
     margin-bottom: 20px;
 }
 
@@ -661,6 +712,9 @@ nav { z-index: 2; }
 	background-color: #E4861F;
 }
 
+.form-container button:hover {
+    background-color: #839ACF;
+}
 .form-container button,
 .form-container button:focus, 
 .form-container button:active,
@@ -675,6 +729,7 @@ nav { z-index: 2; }
 	font-family: 'Open Sans Condensed';
 	font-size: 12px;
     color: #B7B7B7;
+    text-align: center;
 	background-color: #2D2D2D;
 	border: 1px solid #6D6C6C;
     padding: 5px 0;
@@ -691,4 +746,12 @@ nav { z-index: 2; }
     background: -webkit-linear-gradient(top, #292929 0%,#444444 22%,#2b2b2b 99%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #292929 0%,#444444 22%,#2b2b2b 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#2b2b2b',GradientType=0 ); /* IE6-9 */
+}
+
+.copyright span.tn-primary {
+    margin: auto 5px;
+}
+
+.copyright span.tn-secondary {
+    margin: auto 3px auto auto
 }

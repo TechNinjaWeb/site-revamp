@@ -48,7 +48,7 @@
   background: url('../assets/bg/stars_nobg.png') repeat top left;
   background-color: black;
   background-blend-mode: screen;
-  -moz-animation: spin 1000s linear infinite;
-  -webkit-animation: spin 1000s linear infinite;
-  animation: spin 1000s linear infinite;
+  -moz-animation: spin 700s linear infinite;
+  -webkit-animation: spin 700s linear infinite;
+  animation: spin 700s linear infinite;
 }
