@@ -7,6 +7,14 @@ body {
 	font-size: 20px;
 	background-color: white;
 }
+nav[class="-default"], 
+button[class="-default"], 
+a[class="-default"], .btn {
+    border-radius: 0px;
+}
+.no-style a { text-decoration: none; }
+.no-style a:hover { text-decoration: none; }
+.no-style a:focus { text-decoration: none; }
 
 .hidden {
     display: none;

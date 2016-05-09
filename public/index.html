@@ -84,7 +84,7 @@
 			                <ul class="nav navbar-nav list-unstyled list-inline pull-right">
 			                    <li class="nav-link"><a href="#home-anchor" onclick="scrollToAnchor('home-anchor')">Home</a></li>
 			                    <li class="nav-link"><a href="#services-anchor" onclick="scrollToAnchor('services-anchor')">Services</a></li>
-			                    <li class="nav-link"><a href="#portfolio-anchor" onclick="scrollToAnchor('portfolio-anchor')">Portfolio</a></li>
+			                    <li class="nav-link"><a href="#portfolio-anchor" onclick="scrollToAnchor('portfolio-anchor', -60)">Portfolio</a></li>
 			                    <li class="nav-link"><a href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">Contact</a></li>
 			                </ul>
 			            </div>
@@ -92,9 +92,11 @@
 	            </nav>
 	        </div>
 	        <script>
-	        	function scrollToAnchor(aid){
+	        	function scrollToAnchor(aid, offset){
+	        		if (!offset) offset = 0;
 				    var aTag = $("a[name='"+ aid +"']");
-				    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+				    // console.warn("Scrolling to", aTag.offset().top + offset, arguments);
+				    $('html,body').animate({scrollTop: aTag.offset().top + offset},'slow');
 				}
 	        </script>
         </div>
@@ -102,7 +104,7 @@
         	<a name="services-anchor"></a>
 			<div class="nav-bg"></div>
 			<div class="inner">
-			    <a href="#services-anchor" onclick="scrollToAnchor('services-anchor')">
+			    <a class="no-style" href="#services-anchor" onclick="scrollToAnchor('services-anchor')">
 			        <div class="special-title">
 			            <div class="title shadow"><strong>What</strong> We Do</div>
 			        </div>
@@ -225,27 +227,6 @@
 				            });
 			        });
 			        </script>
-			        <script>
-					// $(function() {
-					// 	var el, selectedClass = "",
-					// 		links = $('.portfolio-link, .portfolio-link.active');
-					// 		$(".portfolio-link > .fil-cat").click(function(e){
-					// 			links.map(function(i, element){
-					// 				var target = e.target.offsetParent;
-					// 					element.classList.remove('active');
-					// 					target.classList.add('active');
-					// 			});
-					// 			selectedClass = $(this).attr("data-rel"); 
-					// 			console.log("Selected Class", selectedClass);
-					//      	$("#portfolio").fadeTo(100, 0.1);
-					// 		$("#portfolio .portfolio-item").not("."+selectedClass).fadeOut().removeClass('scale-anm');
-					//     	setTimeout(function() {
-					//       		$("."+selectedClass).fadeIn().addClass('scale-anm');
-					//       		$("#portfolio").fadeTo(300, 1);
-					//     	}, 300);
-					// 	});
-					// });
-				</script>
 			    </nav>
 			</div>	
     	</div>
@@ -294,7 +275,7 @@
 				<!-- /.navbar-collapse -->
 			</nav>
             <div class="inner">
-            	<a href="#portfolio-anchor" onclick="scrollToAnchor('portfolio-anchor')">
+            	<a class="no-style" href="#portfolio-anchor" onclick="scrollToAnchor('portfolio-anchor', -60)">
 	            	<div class="special-title">
 		                <div class="title shadow"><strong>Our</strong> Work</div>
 		            </div>
@@ -404,7 +385,7 @@
         <div class="quotes wrapper">
             <a name="quotes-anchor"></a>
             <div class="inner">
-            	<a href="#quotes-anchor" onclick="scrollToAnchor('quotes-anchor')">
+            	<a class="no-style" href="#quotes-anchor" onclick="scrollToAnchor('quotes-anchor')">
 	            	<div class="special-title">
 		                <div class="title shadow"><strong>Quote</strong> Builder</div>
 		            </div>
@@ -622,7 +603,7 @@
         <div class="contact">
         	<a name="contact-anchor"></a>
             <div class="inner">
-            	<a href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">
+            	<a class="no-style" href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">
 	            	<div class="special-title">
 		                <div class="title shadow"><strong>Contact</strong> Us</div>
 		            </div>

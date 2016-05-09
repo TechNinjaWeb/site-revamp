@@ -73,6 +73,30 @@ String.prototype.color = function(type, alpha) {
     }
 }
 
+String.prototype.px = function(operation, value) {
+    var px = this.toString();
+    if (!operation) return px;
+    if (!value) return px;
+    // Get Num
+    px = parseInt(this.toString(), 10);
+    // Determine operation
+    switch (operation) {
+        case 'add':
+            // Add Px
+            return px + value + "px";
+        case 'sub':
+            // Add Px
+            return px - value + "px";
+        case 'prod':
+            // Add Px
+            return px * value + "px";
+        case 'fact':
+            // Add Px
+            return px / value + "px";
+    }
+
+}
+
 Number.prototype.round = function(p) {
     p = p || 10;
     return parseFloat(this.toFixed(p));
