@@ -1,11 +1,11 @@
 @import '../assets/icons/css/fontello.css';
 body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	font-family: 'PT Sans', 'Helvetica', 'Arial';
-	font-size: 20px;
-	background-color: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'PT Sans', 'Helvetica', 'Arial';
+    font-size: 20px;
+    background-color: white;
 }
 nav[class="-default"], 
 button[class="-default"], 
@@ -28,15 +28,15 @@ a[class="-default"], .btn {
 
 .inner {
     position: relative;
-	max-width: 1200px;
-	margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
     z-index: 1;
 }
 
 .wrapper {
-	position: relative;
-	display: inline-table;
-	width: 100%;
+    position: relative;
+    display: inline-table;
+    width: 100%;
 }
 
 .flex-container {
@@ -62,15 +62,15 @@ a[class="-default"], .btn {
 }
 
 .norm-shadow {
-	-webkit-box-shadow: inset 0 -3px 4px 0 rgba(0,0,0,0.4), inset 0 4px 4px 0 rgba(0,0,0,0.1);
-	-moz-box-shadow: inset 0 -3px 4px 0 rgba(0,0,0,0.4), inset 0 4px 4px 0 rgba(0,0,0,0.1);
-	box-shadow: inset 0 -3px 4px 0 rgba(0,0,0,0.4), inset 0 4px 4px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 -3px 4px 0 rgba(0,0,0,0.4), inset 0 4px 4px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 -3px 4px 0 rgba(0,0,0,0.4), inset 0 4px 4px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 0 -3px 4px 0 rgba(0,0,0,0.4), inset 0 4px 4px 0 rgba(0,0,0,0.1);
 }
 
 .light-shadow {
-	-webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.2);
-	-moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.2);
-	box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.2);
 }
 
 .shadow {
@@ -80,10 +80,10 @@ a[class="-default"], .btn {
 }
 
 .text-shadow {
-	text-shadow: 1px 1px 0px #000;
-	-webkit-text-shadow: 1px 1px 0px #000;
-	-moz-text-shadow: 1px 1px 0px #000;
-	-ms-text-shadow: 1px 1px 0px #000;
+    text-shadow: 1px 1px 0px #000;
+    -webkit-text-shadow: 1px 1px 0px #000;
+    -moz-text-shadow: 1px 1px 0px #000;
+    -ms-text-shadow: 1px 1px 0px #000;
     -webkit-text-stroke: 1px #000;
     -moz-text-stroke: 1px #000;
     -ms-text-stroke: 1px #000;
@@ -105,34 +105,34 @@ a[class="-default"], .btn {
 }
 
 .bordered {
-	border: 1px solid #BDBABA;
+    border: 1px solid #BDBABA;
 }
 
 .special-title {
     max-width: 300px;
-	color: white;
-	text-align: center;
+    color: white;
+    text-align: center;
 }
 
 .special-title .title {
-	background-color: #464646;
-	max-width: 250px;
-	padding: 40px 6px 20px 6px;
-	font-size: 30px;
+    background-color: #464646;
+    max-width: 250px;
+    padding: 40px 6px 20px 6px;
+    font-size: 30px;
 }
 
 nav { z-index: 5; }
 
 .navbar {
-	margin: 0 auto;
-	background-color: black;
-	border: none;
+    margin: 0 auto;
+    background-color: black;
+    border: none;
     height: 78px;
 }
 .navigation {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     margin-top: 20px;
     font-size: 20px;
 }
@@ -144,7 +144,7 @@ nav { z-index: 5; }
 
 .navigation .logo {
     display: inline-block;
-	width: 48px;
+    width: 48px;
 }
 
 .navigation span.slogan {
@@ -184,50 +184,29 @@ nav { z-index: 5; }
 }
 
 .slider {
-	position: relative;
-	height: 97vh;
+    position: relative;
+    height: 97vh;
     width: 100%;
 }
 
-.slider .slide {
-    position: fixed;
-    top: 5%;
-    z-index: -1
-}
-
-.slider .slide .title, .slider .slide .caption {
-    max-width: 760px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.slider .slide .title {
-	font-size: 6vw;
-	line-height: 56px;
-    color: #AFBCFF;
-    -webkit-text-stroke: 0.5px #5A76AC;
-}
-
-.slider .slide .title-bold {
-    display: block;
-    color: #768BFF;
-	font-size: 6vw;
-}
-
-.slider .slide .caption {
-	margin-top: 20px;
-	color: #EFF2FF;
+.slider:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -2;
+    position: absolute;
 }
 
 .slider .slider-bg-container {
-	position: relative;
+    position: relative;
 }
 .slider .slider-bg {
-	position: fixed;
-	background-image: url('../assets/bg/temp_main_bg.png');
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
+    position: fixed;
+    background-image: url('../assets/bg/temp_main_bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     top: 0;
@@ -238,7 +217,7 @@ nav { z-index: 5; }
 .services {
     position: relative;
     height: 74vh;
-	background-color: #5E5E5E;
+    background-color: #5E5E5E;
     overflow: hidden;
 }
 
@@ -260,7 +239,6 @@ nav { z-index: 5; }
     height: 90px;
     background-color: #2F2F2F;
 }
-/*.navbar-default .navbar-nav>.active>a:focus*/
 
 .services .navbar-default .navbar-nav a {
     color: white;
@@ -331,8 +309,8 @@ nav { z-index: 5; }
 
 .portfolio {
     position: relative;
-	height: 90vh;
-	background-color: #fff;
+    height: 90vh;
+    background-color: #fff;
 }
 
 .portfolio .navbar.navbar-default {
@@ -344,13 +322,25 @@ nav { z-index: 5; }
 }
 
 .portfolio .navbar .collapse {
+    position: relative;
     margin-top: 24px;
+}
+
+.navbar .collapse,
+.navbar .collapse:hover,
+.navbar .collapse:focus,
+.navbar .collapse:visited,
+.navbar .collapsing {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    z-index: 2;
 }
 
 .portfolio li.portfolio-link {
     font-size: 14px;
     border: 1px solid #fff;
-    z-index: 2;
+    z-index: 3;
 }
 
 .portfolio li.portfolio-link:hover {
@@ -361,6 +351,7 @@ nav { z-index: 5; }
 .portfolio .navbar-nav > li > a,
 .portfolio .navbar-nav > li > button,
 .portfolio .navbar-nav .btn {
+    width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 30px;
@@ -428,11 +419,12 @@ nav { z-index: 5; }
 }
 
 .testimonials {
-	position: relative;
+    position: relative;
     bottom: 0;
     left: 0;
     background-color: #F6F6F6;
-	padding: 10px 0;
+    padding: 10px 0;
+    line-height: 1;
 }
 
 .testimonials .testimonials-container {
@@ -456,7 +448,7 @@ nav { z-index: 5; }
 }
 
 .testimonials .logo {
-    width: 200px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -465,7 +457,8 @@ nav { z-index: 5; }
 }
 
 .testimonials .testimonial {
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
     word-wrap: break-word;
 }
 
@@ -475,11 +468,12 @@ nav { z-index: 5; }
 
 .testimonials .testimonial .title {
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .quotes {
-	height: 100vh;
-	background-color: #2C2C2C;
+    height: 100vh;
+    background-color: #2C2C2C;
 }
 
 .quotes:before {
@@ -513,14 +507,14 @@ nav { z-index: 5; }
 }
 
 .quote-box .fine-print {
-	display: inline-block;
+    display: inline-block;
     margin-top: 20px;
     color: #B5B4B4;
-	font-size: 10px;
+    font-size: 10px;
 }
 
 .quote-accordian .input-grouping {
-	margin: 0 15px;
+    margin: 0 15px;
 }
 
 .quote-accordian {
@@ -530,14 +524,14 @@ nav { z-index: 5; }
 }
 
 .quote-box .quote-accordian input {
-	width: 60px;
-	background-color: #2A2A2A;
+    width: 60px;
+    background-color: #2A2A2A;
     border: 1px solid #626262;
     color: #B7B7B7;
 }
 
 .dev-toolbelt {
-	background-color: #fff;
+    background-color: #fff;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -551,22 +545,22 @@ nav { z-index: 5; }
 }
 
 .contact {
-	position: relative;
-	/*height: 70vh;*/
-	display: flex;
+    position: relative;
+    min-height: 70vh;
+    display: flex;
     background-color: black;
-	color: #fff;
+    color: #fff;
     z-index: 0;
 }
 
 .contact .message, .contact .phone-box {
     padding-left: 50px;
-    /*margin-right: 50px;*/
-    /*margin-bottom: 50px;*/
+    margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 .contact:after {
-	position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -586,23 +580,23 @@ nav { z-index: 5; }
 }
 
 .contact .contact-box {
-	position: relative;
-	text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .contact .message .heading {
-	font-family: 'Open Sans Condensed';
-	font-size: 26px;
+    font-family: 'Open Sans Condensed';
+    font-size: 26px;
 }
 
 .contact .message .body {
-	margin-top: 20px;
-	font-size: 18px;
+    margin-top: 20px;
+    font-size: 18px;
 }
 
 .contact .social-media {
-	margin-top: 50px;
-	font-size: 1.5em;
+    margin-top: 50px;
+    font-size: 1.5em;
 }
 .contact .social-media button {
     width: 67px;
@@ -692,7 +686,7 @@ nav { z-index: 5; }
 }
 
 .form-container .input-group {
-	border: none;
+    border: none;
     border-bottom: 1px solid #B3B3B3;
     -webkit-input-placeholder: #C7C7C7;
     -moz-placeholder: #C7C7C7;
@@ -701,7 +695,7 @@ nav { z-index: 5; }
 }
 
 .form-container .input-group:nth-child(4) {
-	border: none;
+    border: none;
 }
 
 .form-container .contact-message {
@@ -710,14 +704,14 @@ nav { z-index: 5; }
 }
 
 .form-container button {
-	background-color: #EB9231;
-	color: #fff;
+    background-color: #EB9231;
+    color: #fff;
     margin-top: 20px;
     z-index: 1;
 }
 
 .form-container button:focus {
-	background-color: #E4861F;
+    background-color: #E4861F;
 }
 
 .form-container button:hover {
@@ -728,18 +722,18 @@ nav { z-index: 5; }
 .form-container button:active,
 .form-container button:hover,
 .form-container button:visited {
-	outline: none!important;
-	color: white;
+    outline: none!important;
+    color: white;
 }
 
 .copyright {
     position: absolute;
-	font-family: 'Open Sans Condensed';
-	font-size: 12px;
+    font-family: 'Open Sans Condensed';
+    font-size: 12px;
     color: #B7B7B7;
     text-align: center;
-	background-color: #2D2D2D;
-	border: 1px solid #6D6C6C;
+    background-color: #2D2D2D;
+    border: 1px solid #6D6C6C;
     padding: 5px 0;
     bottom: 0;
     width: 100%;

@@ -7,13 +7,11 @@
     <meta name="description" content="Tech Ninja | Web &amp; IT Advanced Web Applications">
     <meta name="author" content="4UmNinja">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <!-- Toastr Plugin CSS -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.css"/>
+    <link rel="stylesheet" type="text/css" href="./vendor/toastr/toastr.css"/>
 
-    <!-- <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/const.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -21,7 +19,11 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/rotating.sky.css">
     <link rel="stylesheet" href="css/quote.builder.css">
-
+	
+	<!-- Backup CDN -->
+	<!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.css"/> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"> -->
     <!--<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>-->
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
 
@@ -32,9 +34,10 @@
     <script src="./vendor/backand/backand.js"></script>
     <script src="./vendor/backand/jquery.backand.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/q.js/0.9.2/q.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>-->
+    <script src="./vendor/angular/angular.js"></script>
+    <script src="./vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="https://cdn.backand.net/backand/dist/1.8.2/backand.min.js"></script>
 
     <script src="./js/prototypes.js"></script>
@@ -188,7 +191,7 @@
 			                <li class="service-link" data-rel="apps">
 			                    <a href="#">
 			                        <i class="fa fa-lg fa-mobile inset-text"></i>
-			                        <span class="title inset-text">Smart Apps</span>
+			                        <span class="title inset-text">Apps</span>
 			                    </a>
 			                </li>
 			            </ul>
@@ -364,12 +367,12 @@
         		<span class="nav-left"><i class="fa fa-lg fa-chevron-circle-left"></i></span>
         		<ul class="testimonials-container list-unstyled">
         			<li class="testimonial">
-        				<div class="logo col-xs-3">
-		        			<div class="bordered">
-		        				<img src="./assets/logos/th-logo.png" alt="">
+        				<div class="logo col-xs-12 col-sm-2 col-sm-offset-2">
+		        			<div class="client-logo">
+		        				<img class="img-responsive" src="./assets/logos/th-logo.png" alt="">
 		        			</div>
 		        		</div>
-		        		<div class="testimony col-xs-9">
+		        		<div class="testimony col-xs-12 col-sm-7">
 		        			<div class="title">Trenderz Hub</div>
 		        			<i class="body">
 		        				is simply dummy text of the printing and typesetting 
@@ -381,6 +384,19 @@
         		</ul>
         		<span class="nav-right"><i class="fa fa-lg fa-chevron-circle-right"></i></span>
         	</div>
+        	<script>
+        		var testimonialNav = $('.testimonials .nav-right, .testimonials .nav-left');
+
+        		testimonialNav.click(function(e){
+        			
+        			var target = e.target,
+        				direction = target.className.split('-')[ target.className.split('-').length - 1 ];
+
+        			console.log(direction);
+        		})
+
+
+        	</script>
         </div>
         <div class="quotes wrapper">
             <a name="quotes-anchor"></a>
