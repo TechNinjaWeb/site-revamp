@@ -546,7 +546,7 @@ nav { z-index: 5; }
 
 .contact {
     position: relative;
-    min-height: 70vh;
+    min-height: 76vh;
     display: flex;
     background-color: black;
     color: #fff;
