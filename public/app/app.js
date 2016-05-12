@@ -6,12 +6,11 @@ var app = angular.module('app', [
 		'backend.constants'
 	])
   .controller('main', function($scope, $http, Backand, CONSTANTS) {
+  	window.http = $http;
     $http.defaults.headers.common.anonymousToken = CONSTANTS.anonymousToken;
 
     $scope.message = "Loaded";
     $scope.appCtrl = $scope;
-    
-    var self = window.SCOPE = this;
 
     var self = this;
     var baseUrl = Backand.getApiUrl() + '/1/objects/';
@@ -95,6 +94,41 @@ var app = angular.module('app', [
         }); */
         // Send inputs back
         return inputs;
+    };
+
+    self.sendQuote = function ( email, quote ) {
+        console.log("Quote", quote);
+        // Gather Data By Name
+        var data = quote.reduce(function(o, c, i, a){
+        	var name = c.name.camelCase().trim();
+        	if (c.value >0) o[name] = angular.toJson(c);
+
+        	try {
+        		o[name] = parseFloat( o[name] );
+
+        		if (c.hasOwnProperty('checked') && c.checked) o[name] = c.checked;
+        		if (!c.hasOwnProperty('checked') && !c.checked) o[name] = parseFloat(c.value);
+        	} catch (e) {
+        		o[name] = c.value;
+        	}
+        	return o;
+        }, {});
+
+        console.warn("Data", data);
+        // Set Users Email
+        data.email = email;
+        $http({
+            method: 'POST',
+            url: Backand.getApiUrl() + '/1/objects/quotes?returnObject=true',
+            data: data
+        }).success(function(res){
+        	console.log("Posted .. Toastr This", res);
+        	toastr.success("Thank You! We've Sent An Email To: " + email);
+        }).error(function(err){
+        	console.warn(err);
+        });
+        // Redundant return
+        return {email: email, quote: quote};
     };
 
     self.clearForm = function() {

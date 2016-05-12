@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <!-- Toastr Plugin CSS -->
     <link rel="stylesheet" type="text/css" href="./vendor/toastr/toastr.css"/>
+    <!-- Animate.CSS -->
+    <link rel="stylesheet" type="text/css" href="./vendor/animate.css/animate.css"/>
 
     <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css">
@@ -26,21 +28,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"> -->
     <!--<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>-->
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="https://cdn.backand.net/backand/dist/1.8.2/backand.min.js"></script>-->
 
     <script src="./vendor/jquery/jquery.js"></script>
     <script src="./vendor/jquery/jquery.color.js"></script>
     <script src="./vendor/bootstrap/bootstrap.min.js"></script>
-	<!-- Jquery Color Animation Plugin -->
-    <script src="./vendor/backand/backand.js"></script>
-    <script src="./vendor/backand/jquery.backand.js"></script>
-
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>-->
+	<!-- Custom TN -->
+	<script src="./js/prototypes.js"></script>
+    <!-- Angular -->
     <script src="./vendor/angular/angular.js"></script>
     <script src="./vendor/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="https://cdn.backand.net/backand/dist/1.8.2/backand.min.js"></script>
+	<!-- Backand Server -->
+    <script src="./vendor/backand/backand.min.js"></script>
 
-    <script src="./js/prototypes.js"></script>
     <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -48,8 +50,8 @@
 <body>	
 	<div ui-view></div>
     <div class="page">
+    	<a name="home-anchor"></a>
         <div class="slider wrapper">
-        	<a name="home-anchor"></a>
         	<div class="rotating-sky-container">
         		<div class="rotating-sky"></div>
         	</div>
@@ -61,9 +63,9 @@
 	                	<strong class="title-bold">That'll get you noticed</strong>
 	                </div>
 	                <div class="caption">
-	                	We strive to develop fully automated 
-	                	systems for Discovering, Cultivating, 
-	                	Stimulating &amp; Empowering our Partners
+	                	You're a unique organization of ideas and motivations.
+	                	Our goal is to channel your essense into beautiful things
+	                	that grow your business.
 	                </div>
 	            </div>
             </div>
@@ -113,30 +115,30 @@
 			        </div>
 			    </a>
 			    <div class="slides-container">
-			    	<div class="slide active hidden digital">
+			    	<div class="slide fadeIn animated active hidden digital">
 				        <div class="title">Digital Media</div>
 				        <div class="caption">
-				            We've got the right tools for any multimedia production you're
+				            We employ industry standards for any multimedia production you're
 				            planning. 
 				            <br><br>
 				            Have us put something together for your next meetup
 				            or conference.
 				        </div>
 				        <button class="learn-more">Learn More</button>
-				        <div class="slide-image pull-right"><img src="./assets/home/imac-transparent.png" alt=""></div>
+				        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/imac-transparent.png" alt=""></div>
 				    </div>
-				    <div class="slide hidden branding">
+				    <div class="slide fadeIn animated hidden branding">
 				        <div class="title">Branding</div>
 				        <div class="caption">
-				            Engage your clients with a consistent image. 
-							<br><br>
-				            We recognize that your business is a special part of 
-				            who you are and speaks to your them through it's branding.
+				            Your business is a special part of who you are and
+				            your image is an important detail.
+				            <br><br>
+				            We build brands that resonate with you at it's core.
 				        </div>
 				        <button class="learn-more">Learn More</button>
-				        <div class="slide-image pull-right"><img src="./assets/home/imac-transparent.png" alt=""></div>
+				        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/imac-transparent.png" alt=""></div>
 				    </div>
-				    <div class="slide hidden web">
+				    <div class="slide fadeIn animated hidden web">
 				        <div class="title">Web Development</div>
 				        <div class="caption">
 				            We use proven technologies to get the job done right the first time.
@@ -144,18 +146,18 @@
 				            From photo galleries to real time chat sites, we've got the right tools.
 				        </div>
 				        <button class="learn-more">Learn More</button>
-				        <div class="slide-image pull-right"><img src="./assets/home/imac-transparent.png" alt=""></div>
+				        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/imac-transparent.png" alt=""></div>
 				    </div>
-				    <div class="slide hidden apps">
+				    <div class="slide fadeIn animated hidden apps">
 				        <div class="title">Smart Apps</div>
 				        <div class="caption">
-				            Both the world and your business is ever changing 
+				            Both the world and your business is ever changing. 
 							<br><br>
-				            Smart apps give you the power to monitor your ROI while engaging loyalty 
-				            and positive behavior.
+				            Smart apps give you the power to monitor your ROI while
+				            engaging retention and loyalty.
 				        </div>
 				        <button class="learn-more">Learn More</button>
-				        <div class="slide-image pull-right"><img src="./assets/home/imac-transparent.png" alt=""></div>
+				        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/imac-transparent.png" alt=""></div>
 				    </div>
 			    </div>
 			    <nav class="navbar navbar-default">
@@ -366,7 +368,7 @@
         	<div class="inner">
         		<span class="nav-left"><i class="fa fa-lg fa-chevron-circle-left"></i></span>
         		<ul class="testimonials-container list-unstyled">
-        			<li class="testimonial">
+        			<li class="testimonial active">
         				<div class="logo col-xs-12 col-sm-2 col-sm-offset-2">
 		        			<div class="client-logo">
 		        				<img class="img-responsive" src="./assets/logos/th-logo.png" alt="">
@@ -381,19 +383,94 @@
 		        			</i>
 		        		</div>
         			</li>
+        			<li class="testimonial hidden">
+        				<div class="logo col-xs-12 col-sm-2 col-sm-offset-2">
+		        			<div class="client-logo">
+		        				<img class="img-responsive" src="./assets/logos/th-logo.png" alt="">
+		        			</div>
+		        		</div>
+		        		<div class="testimony col-xs-12 col-sm-7">
+		        			<div class="title">Trenderz Hub</div>
+		        			<i class="body">
+		        				Kennith is a sly devil, dastardly, nogood, ramsack of a 
+		        				fellow. I mean one day I almost straigh out an puched him
+		        				in the arm through the teetch for smack talking me so much.
+		        				Why I aughta!
+		        			</i>
+		        		</div>
+        			</li>
+        			<li class="testimonial hidden">
+        				<div class="logo col-xs-12 col-sm-2 col-sm-offset-2">
+		        			<div class="client-logo">
+		        				<img class="img-responsive" src="./assets/logos/th-logo.png" alt="">
+		        			</div>
+		        		</div>
+		        		<div class="testimony col-xs-12 col-sm-7">
+		        			<div class="title">Trenderz Hub</div>
+		        			<i class="body">
+		        				Billy bob is my dog, and he is the best dog a boy could
+		        				ever ask for. I mean he once took a chip on the shoulder
+		        				from a flying squirell and almost got rabies from the 
+		        				neighbors gerble. 
+		        			</i>
+		        		</div>
+        			</li>
         		</ul>
         		<span class="nav-right"><i class="fa fa-lg fa-chevron-circle-right"></i></span>
         	</div>
         	<script>
-        		var testimonialNav = $('.testimonials .nav-right, .testimonials .nav-left');
 
-        		testimonialNav.click(function(e){
-        			
-        			var target = e.target,
-        				direction = target.className.split('-')[ target.className.split('-').length - 1 ];
+        		$(function() {
+					var el, time = 5000, interval, btns = $(''),
+						testimonials = $('.testimonials-container'),
+						testimonialNav = $('.testimonials .nav-right, .testimonials .nav-left');
 
-        			console.log(direction);
-        		})
+					$('.testimonials').on('mouseleave', function(e){ playAnimation();});
+					$('.testimonials').on('mouseover', function(e){ stopAnimation();});
+
+					playAnimation()
+
+	        		testimonialNav.click(function(evt){
+	        			var testimonials = $('.testimonials-container'),
+	        				direction = getDirection( evt ),
+        					active = $('.testimonial.active');
+
+    					transition( active, direction );
+
+	        			function getDirection( event ) {
+	        				var target = event.target;
+	        				return target.className.split('-')[ target.className.split('-').length - 1 ]
+	        			}
+	        		})
+
+	        		function playAnimation(){
+	        			interval = setInterval(function(){
+	        				active = $('.testimonial.active');
+	        				transition( active, 'right');
+	        			}, time);
+	        		}
+	        		window.playAnim = playAnimation;
+	        		window.stopAnim = stopAnimation;
+	        		function stopAnimation(){
+	        			clearInterval(interval);
+	        		}
+
+	        		function next( el ) {
+        				if (el.next().length !== 0) el.next().fadeIn().removeClass('hidden').addClass('active');
+        				else testimonials.children().first().fadeIn().removeClass('hidden').addClass('active');
+        			}
+
+        			function prev( el ) {
+        				if (el.prev().length !== 0) el.prev().fadeIn().removeClass('hidden').addClass('active');
+        				else testimonials.children().last().fadeIn().removeClass('hidden').addClass('active');
+        			}
+
+	        		function transition( active, direction ) {
+        				active.fadeOut().removeClass('active').addClass('hidden');
+        				if (direction === 'right') next( active );
+        				if (direction === 'left') prev( active );
+        			}
+				});
 
 
         	</script>
@@ -401,7 +478,7 @@
         <div class="quotes wrapper">
             <a name="quotes-anchor"></a>
             <div class="inner">
-            	<a class="no-style" href="#quotes-anchor" onclick="scrollToAnchor('quotes-anchor')">
+            	<a class="no-style" href="#quotes-anchor" onclick="scrollToAnchor('quotes-anchor', -50)">
 	            	<div class="special-title">
 		                <div class="title shadow"><strong>Quote</strong> Builder</div>
 		            </div>
@@ -428,6 +505,7 @@
 								for more information.
 							</strong>
 						</div>
+						<button class="btn btn-success sendQuoteBtn hidden" ng-controller="main">Get A Copy</button>
 	                </div>
 	            	<div class="quote-accordian col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1">
 	                    <h3 class="quote-box-title">Build A Quote</h3>
@@ -435,7 +513,7 @@
 	                        <div class="panel panel-default">
 	                            <div class="panel-heading" role="tab" id="headingOne">
 	                                <h4 class="panel-title">
-					                	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteMedia" aria-expanded="true" aria-controls="quoteMedia">Media</a>
+					                	<a class="no-style" role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteMedia" aria-expanded="true" aria-controls="quoteMedia">Media</a>
 					                </h4>
 	                            </div>
 	                            <div id="quoteMedia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -454,7 +532,7 @@
 	                        <div class="panel panel-default">
 	                            <div class="panel-heading" role="tab" id="headingTwo">
 	                                <h4 class="panel-title">
-			                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteBranding" aria-expanded="false" aria-controls="quoteBranding">Branding</a>
+			                            <a class="no-style collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteBranding" aria-expanded="false" aria-controls="quoteBranding">Branding</a>
 			                        </h4>
 	                            </div>
 	                            <div id="quoteBranding" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -498,7 +576,7 @@
 	                        <div class="panel panel-default">
 	                            <div class="panel-heading" role="tab" id="headingThree">
 	                                <h4 class="panel-title">
-						              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteWebsites" aria-expanded="false" aria-controls="quoteWebsites">
+						              <a class="no-style collapsed"role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteWebsites" aria-expanded="false" aria-controls="quoteWebsites">
 						                Websites
 						              </a>
 						            </h4>
@@ -550,7 +628,7 @@
 	                        <div class="panel panel-default">
 	                            <div class="panel-heading" role="tab" id="headingThree">
 	                                <h4 class="panel-title">
-			                        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteSmartApps" aria-expanded="false" aria-controls="quoteSmartApps">Smart Apps</a>
+			                        	<a class="no-style collapsed"role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteSmartApps" aria-expanded="false" aria-controls="quoteSmartApps">Smart Apps</a>
 			                        </h4>
 	                            </div>
 	                            <div id="quoteSmartApps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -630,29 +708,29 @@
 			            	We're waiting to hear from you!
 			            </div>
 			            <p class="body">
-			            	Get in touch with us to find out what
-			            	we're capable of. Our team eagerly awaits
-			            	the opportunity to bring your ideas to life.
+			            	Send us a message with using these.
+							<br><br>
+			            	We can't wait to help bring your idea to life.
 			            </p>
 			            <div class="social-media">
-			            	<button class="facebook" href="https://facebook.com/4umninja">
+			            	<button class="facebook col-xs-2" href="https://facebook.com/4umninja">
 			            		<i class="fa fa-lg fa-facebook">
 			            		</i>
 			            	</button>
-			            	<button class="twitter" href="https://twitter.com/4umninja">
+			            	<button class="twitter col-xs-2" href="https://twitter.com/4umninja">
 			            		<i class="fa fa-lg fa-twitter">
 			            		</i>
 			            	</button>
-			            	<button class="google" href="https://google.com/4umninja">
+			            	<button class="google col-xs-2" href="https://google.com/4umninja">
 			            		<i class="fa fa-lg fa-google-plus">
 			            		</i>
 			            	</button>
-			            	<button class="youtube" href="https://youtube.com/Phreelyfe">
+			            	<button class="youtube col-xs-2" href="https://youtube.com/Phreelyfe">
 			            		<i class="fa fa-lg fa-youtube">
 			            		</i>
 			            	</button>
-			            	<button class="website" mail-to="info@tech-ninja.ca">
-			            		<i class="fa fa-lg fa-laptop">
+			            	<button class="website col-xs-2" mail-to="info@tech-ninja.ca">
+			            		<i class="fa fa-lg fa-envelope">
 			            		</i>
 			            	</button>
 			            </div>
@@ -703,6 +781,17 @@
 
 			            					window.toastr.success("Thank You " + inputs[0].split(' ')[0], "We'll Get Back To You Shortly", {"positionClass": "toast-bottom-left"});
 			            				}
+
+			            				$(function(){
+			            					(function play() {
+			            						// console.warn("Playing", $('#saveForm'));
+			            						$('#saveForm').addClass('animated rubberBand')
+			            							.delay(5000).queue(function(){
+			            								$(this).removeClass('animated rubberBand').dequeue();
+			            								setTimeout(play, 100);
+			            							})
+			            					}());
+			            				});
 			            			</script>
 			            		</form>
 		            		</div>
@@ -712,6 +801,27 @@
             </div>
         </div>
     </div>
+
+	<!-- Modal -->
+	<div id="pageModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title"></h4>
+	      </div>
+	      <div class="modal-body">
+	        <p class="modal-body-text"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
     <div class="copyright wrapper text-center">
     	<span class="copy">Copyright ©</span>
     	<span class="tn-primary">Tech</span>

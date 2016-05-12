@@ -48,7 +48,7 @@ function setPosition( element, state ) {
 			.css('width', '100%')
 			.animate({top: 0});
 		dropped = true;
-		console.info("Turned on el");
+		// console.info("Turned on el");
 		setBg( element, 'black' );
 	}
 
@@ -57,7 +57,7 @@ function setPosition( element, state ) {
 		element.css('position', 'relative')
 		.css('width', '100%')
 		dropped = false;
-		console.info("Shut off el");
+		// console.info("Shut off el");
 		setBg( element, 'transparent' );
 	}
 }

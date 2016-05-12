@@ -40,19 +40,70 @@
 
         });
         /////////////////////////////////////////////////////////////////////////////
-        //    TEMP: Get Prices Btn - (bind to autosave feature)
+        //    Get Prices Btn - (bind to autosave feature)
         /////////////////////////////////////////////////////////////////////////////
         $('.get-price').eq(0).on('click', OutputPrice);
         $('.input-grouping input').bind('change', OutputPrice);
     });
 
-    function toggleHiddenContent(target, selector) {
-        var hiddenInput = $(selector).eq(0).toggle();
-    }
+
+    $('.sendQuoteBtn').click(function(evt){
+        var modal = $('#pageModal'),
+            content = $('#pageModal .modal-content'),
+            title = content.children().filter('.modal-header').children().filter('.modal-title'),
+            text = content.children().filter('.modal-body').children().filter('.modal-body-text'),
+            footer = content.children().filter('.modal-footer');
+        
+        var input = $('<input>').prop('placeholder', 'Enter Your Email')
+            .prop('type', 'email')
+            .addClass('form-control modal-input');
+
+        var sendBtn = $('<button>').addClass('quote-box-modal-button btn btn-success')
+            .html('Send')
+            .click(function(evt){
+                // Get Users Email
+                var email = input.val();
+                // console.info("Sending Info", email);
+                // Get Quote Form
+                var form = getInputs();
+                // console.log("Sending Quote", form);
+                // Get Angular Element
+                var element = angular.element('.sendQuoteBtn');
+                // Send Quote
+                element.scope().sendQuote( email, form );
+                // Close Modal
+                modal.modal('hide');
+            });
+
+            console.log(input);
+            // Set Title
+            title.html('Send Yourself A Copy');
+            // Reset Input Before Appending
+            text.html('Send This Quote To Your Email!').append( input );
+            // Reset Send Btn Before Appending
+            $('.quote-box-modal-button').detach();
+            // Prepend To Footer
+            footer.prepend( sendBtn );
+            // Show Modal
+            modal.modal('show');
+    });
+
+    function toggleHiddenContent(target, selector) { var hiddenInput = $(selector).eq(0).toggle(); }
 
     function getPrice() {
         // var list = $('.input-grouping:not(.checkBox)');
-        var checked = $('.input-grouping.checkBox').splice(0).reduce(function(arr, el, i, a) {
+        var checked = getCheckedInputs();
+        // console.warn("Checked", checked);
+        var notChecked = getUncheckedInputs();
+        // console.info("Not Checked", notChecked);
+        var prices = [getTotal(checked), getTotal(notChecked)];
+        var totals = [gatherArrayTotals(prices[0]), gatherArrayTotals(prices[1])].getPriceTotals();
+        // console.info("Totals", totals);
+        return totals;
+    }
+
+    function getCheckedInputs() {
+        return $('.input-grouping.checkBox').splice(0).reduce(function(arr, el, i, a) {
             // Return jQuery Object
             el = $(el);
             // Define the input we're looking for
@@ -71,10 +122,10 @@
         }, []).filter(function(e) {
             if (e.checked) return e;
         });
+    }
 
-        // console.warn("Checked", checked);
-
-        var notChecked = $('.input-grouping:not(.checkBox)').splice(0).reduce(function(arr, el, i, a) {
+    function getUncheckedInputs() {
+        return $('.input-grouping:not(.checkBox)').splice(0).reduce(function(arr, el, i, a) {
             // Return jQuery Object
             el = $(el);
             // Define the input we're looking for
@@ -88,15 +139,12 @@
             // console.log("Input from notchecked", input);
             return arr;
         }, []);
+    }
 
-        // console.info("Not Checked", notChecked);
-
-        var prices = [getTotal(checked), getTotal(notChecked)];
-        var totals = [gatherArrayTotals(prices[0]), gatherArrayTotals(prices[1])].getPriceTotals();
-
-        // console.info("Totals", totals);
-
-        return totals;
+    function getInputs(){
+        var c = getCheckedInputs(),
+            u = getUncheckedInputs();
+        return c.mergeArray( u );
     }
 
     function getTotal(priceValues) {
@@ -166,7 +214,11 @@
         if (timeout) clearTimeout(timeout);
         // Set timeout for input
         timeout = setTimeout(output, time);
-
+        // Enable Send Quote Btn
+        // if (total > 0) $('.sendQuoteBtn').addClass('animated fadeIn').removeClass('hidden').removeClass('animated').removeClass('fadeOut');
+        
+        if (total > 0) $('.sendQuoteBtn').removeClass('hidden').removeClass('animated fadeOut').addClass('animated fadeIn');
+        else $('.sendQuoteBtn').removeClass('animated fadeIn').addClass('animated fadeOut');
 
         // Output to dom
         function output() {

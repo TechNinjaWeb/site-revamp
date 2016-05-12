@@ -97,6 +97,10 @@ String.prototype.px = function(operation, value) {
 
 }
 
+String.prototype.camelCase = function(){
+    return this.toString().replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
+}
+
 Number.prototype.round = function(p) {
     p = p || 10;
     return parseFloat(this.toFixed(p));
@@ -111,4 +115,75 @@ Array.prototype.getPriceTotals = function(array) {
     }
 
     return sum;
+}
+
+Array.prototype.mergeArray = function( array ) {
+    var a = [];
+        Array.prototype.push.apply(a, this),
+        Array.prototype.push.apply(a, array);
+    return a;
+}
+
+HTMLElement.prototype.inView = function(cb){
+    var err;
+    // Get Window Atribs
+    var getViewFrame = function(){ return {w: window.innerWidth, h: window.innerHeight, y: window.scrollY }; };
+    // Define inview variable
+    var inview;
+    // Define Self
+    var self = this;
+        self.listener = listener,
+        self.inviewCallback = cb,
+        // Define The Callback as an Object
+        cb = typeof cb === 'function' ? { in: cb, out: cb } : typeof cb === 'object' ? cb : !cb ? function noInViewCallback(){} : function noInViewCallback(){};
+        self.removeInviewListener = function(){ document.removeEventListener( 'inView', cb.in ); document.removeEventListener( 'outView', cb.out );document.removeEventListener('scroll', listener);  return "Successfully Removed Listener" };
+    // Error Check
+    try {
+        if(cb.name === 'noInViewCallback') throw new Error('No Inview Callback');
+        if(!self) throw new Error('Element Not Defined');
+        if(!getViewFrame) throw new Error('Could not get Window Object');
+    } catch( e ) {
+        err = { error: e, params: {
+            this: self,
+            scroll: listener,
+            callback: cb,
+            win: getViewFrame(),
+            pos: self.getPosition()
+        }};
+    } finally {
+        if (err) return err;
+    }
+
+    // Event Listners
+    document.addEventListener('scroll', listener);
+    document.addEventListener('inView', cb.in);
+    document.addEventListener('outView', cb.out);
+    
+    // End function & Return this to chain
+    return this;
+    // Scroll Event Listner
+    function listener(evt){
+        var size = getViewFrame();
+        var pos = self.getPosition();
+        var inviewEvent = new CustomEvent('inView', {detail: { event: evt, target: self, pos: { window: size, element: pos}, inview: true }});
+        var outviewEvent = new CustomEvent('outView', {detail: { event: evt, target: self, pos: { window: size, element: pos}, inview: false }})
+        
+        if (!pos) return;
+        // console.warn(pos.top >= size.y && pos.top <= ( size.y + size.h ) && !inview , {oH: pos.top, gvf: size });
+        
+        if (pos.top >= size.y && pos.top <= ( size.y + size.h ) && !inview ) inview=true, document.dispatchEvent( inviewEvent );
+        if (pos.top > ( size.y + size.h ) && inview || pos.top < size.y  && inview ) inview=false, document.dispatchEvent( outviewEvent );
+    }
+}
+
+HTMLElement.prototype.getPosition = function findPos() {
+    var obj = this;
+    var curleft = curtop = 0;
+    if (obj.offsetParent) {
+        do {
+            curleft += obj.offsetLeft;
+            curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+        return {left: curleft, top: curtop};
+    }
 }

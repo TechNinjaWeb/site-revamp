@@ -12,9 +12,9 @@ button[class="-default"],
 a[class="-default"], .btn {
     border-radius: 0px;
 }
-.no-style a { text-decoration: none; }
-.no-style a:hover { text-decoration: none; }
-.no-style a:focus { text-decoration: none; }
+.no-style a, a.no-style { text-decoration: none; outline: none; }
+.no-style a:hover { text-decoration: none; outline: none; }
+.no-style a:focus { text-decoration: none; outline: none; }
 
 .hidden {
     display: none;
@@ -139,7 +139,7 @@ nav { z-index: 5; }
 
 .navigation .navbar-brand {
     position: absolute;
-    font-size: 50px;
+    font-size: 44px;
 }
 
 .navigation .logo {
@@ -231,6 +231,10 @@ nav { z-index: 5; }
     z-index: 0;
 }
 
+.services ul.navbar-nav {
+    overflow: hidden;
+}
+
 .services .nav-bg {
     position: absolute;
     top: 0;
@@ -305,6 +309,7 @@ nav { z-index: 5; }
 .services .slide-image img {
     width: 400px;
     margin-top: -250px;
+    opacity: 0.1;
 }
 
 .portfolio {
@@ -497,7 +502,7 @@ nav { z-index: 5; }
     font-size: 18px;
     color: #fff;
     margin-top: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .quote-box .disclaimer {
@@ -511,6 +516,10 @@ nav { z-index: 5; }
     margin-top: 20px;
     color: #B5B4B4;
     font-size: 10px;
+}
+
+.quote-box button.sendQuoteBtn {
+    margin-top: 50px;
 }
 
 .quote-accordian .input-grouping {
@@ -598,8 +607,9 @@ nav { z-index: 5; }
     margin-top: 50px;
     font-size: 1.5em;
 }
+
 .contact .social-media button {
-    width: 67px;
+    width: 62px;
     background-color: transparent;
     border: none;
 }
@@ -610,6 +620,10 @@ nav { z-index: 5; }
 
 .contact .social-media button:focus {
     outline: none;
+}
+
+.contact .social-media button:first-child {
+    padding-left: 0;
 }
 
 .contact .social-media i {
@@ -627,7 +641,7 @@ nav { z-index: 5; }
 
 .contact-box .contact-form input:focus,
 .contact-box .contact-form textarea:focus {
-    outline-color: #C7C7C7;
+    outline-color: #EB9231;
     outline-style: auto;
     outline-width: 5px;
 }
@@ -756,4 +770,8 @@ nav { z-index: 5; }
 
 .copyright span.tn-secondary {
     margin: auto 3px auto auto
+}
+
+#pageModal .modal-input {
+    margin-top: 20px;
 }
