@@ -285,59 +285,65 @@
 		                <div class="title shadow"><strong>Our</strong> Work</div>
 		            </div>
 	            </a>
-	            <div id="portfolio" class="portfolio-grid">
+	            <div id="portfolio" class="portfolio-grid flex-container">
 	                <div class="portfolio-item col-sm-4 col-md-3 app all show">
 	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/amma-construction.png" alt="">
 	                        <div class="title">AMMA Construction</div>
 	                    </div>
 	                </div>
 	                <div class="portfolio-item col-sm-4 col-md-3 branding all">
 	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">Trenderz Hub</div>
-	                    </div>
-	                </div>
-	                <div class="portfolio-item col-sm-4 col-md-3 web all">
-	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">AMMA Construction</div>
-	                    </div>
-	                </div>
-	                <div class="portfolio-item col-sm-4 col-md-3 digital all">
-	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">AMMA Construction</div>
-	                    </div>
-	                </div>
-	                <div class="portfolio-item col-sm-4 col-md-3 web all">
-	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">AMMA Construction</div>
-	                    </div>
-	                </div>
-	                <div class="portfolio-item col-sm-4 col-md-3 digital all">
-	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">AMMA Construction</div>
-	                    </div>
-	                </div>
-	                <div class="portfolio-item col-sm-4 col-md-3 web all">
-	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">AMMA Construction</div>
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/annies-repurpose.png" alt="">
+	                        <div class="title">Annies Repurpose</div>
 	                    </div>
 	                </div>
 	                <div class="portfolio-item col-sm-4 col-md-3 branding all">
 	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">AMMA Construction</div>
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/bluebook-business.png" alt="">
+	                        <div class="title">Bluebook Business</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/dfc-diesel.png" alt="">
+	                        <div class="title">DFC Diesel</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 digital all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/evo-power.png" alt="">
+	                        <div class="title">Evolution Power</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/nitro-tech.png" alt="">
+	                        <div class="title">Nitro Tech</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 digital all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/room-xi.png" alt="">
+	                        <div class="title">Room XI</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/smoke-em.png" alt="">
+	                        <div class="title">Smoke Em Diesel</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 branding all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/spa-cantik.png" alt="">
+	                        <div class="title">Spacantik</div>
 	                    </div>
 	                </div>
 	                <div class="portfolio-item col-sm-4 col-md-3 apps all">
 	                    <div class="portfolio-container light-shadow">
-	                        <img class="portfolio-img" src="./assets/home/tmp-portfolio-img.png" alt="">
-	                        <div class="title">AMMA Construction</div>
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/uncle-bear-spices.png" alt="">
+	                        <div class="title">Uncle Bear Spices</div>
 	                    </div>
 	                </div>
 	            </div>
@@ -360,6 +366,26 @@
 					      		$("#portfolio").fadeTo(300, 1);
 					    	}, 300);
 						});
+
+						var items = $('.portfolio-item').click(function(evt){
+							var el = $(evt.target),
+								src = el.filter('img').prop('src'),
+								title = el.parent().children().filter('.title').html();
+
+							var modal = $('#pageModal'),
+					            modalContent = $('#pageModal .modal-content'),
+					            modalTitle = modalContent.children().filter('.modal-header').children().filter('.modal-title'),
+					            modalText = modalContent.children().filter('.modal-body').children().filter('.modal-body-text'),
+					            modalFooter = modalContent.children().filter('.modal-footer');
+
+
+					        modalTitle.html(title), 
+					        console.log("Modal Title", title),
+					        modalText.html( $('<img>').addClass('img-responsive').prop('src', src) );
+					        modal.modal('show');
+
+							console.log("Href", src);
+						})
 					});
 				</script>
             </div>
@@ -696,12 +722,12 @@
         </ul>
         <div class="contact">
         	<a name="contact-anchor"></a>
+        	<a class="no-style" href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">
+            	<div class="special-title">
+	                <div class="title shadow"><strong>Contact</strong> Us</div>
+	            </div>
+            </a>
             <div class="inner">
-            	<a class="no-style" href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">
-	            	<div class="special-title">
-		                <div class="title shadow"><strong>Contact</strong> Us</div>
-		            </div>
-	            </a>
             	<div class="flex-container">
             		<div class="message">
 		            	<div class="heading">
@@ -749,7 +775,7 @@
 			            				var className = e.target.parentElement.classList[0].split('-')[0],
 			            					sendTo = urls[ className ];
 
-			            				console.warn(["Clicked E", e], ["Sending To", sendTo]);
+			            				// console.warn(["Clicked E", e], ["Sending To", sendTo]);
 			            				if (className !== 'website') window.open( sendTo );
 			            				else window.open(sendTo);
 			            			});
@@ -801,6 +827,12 @@
             	</div>
             </div>
         </div>
+        <div class="copyright wrapper text-center">
+	    	<span class="copy">Copyright ©</span>
+	    	<span class="tn-primary">Tech</span>
+	    	<span class="tn-secondary">Ninja</span>
+	    	<span class="tn-slogan">| Web &amp; IT</span>
+	    </div>
     </div>
 
 	<!-- Modal -->
@@ -823,12 +855,6 @@
 
 	  </div>
 	</div>
-    <div class="copyright wrapper text-center">
-    	<span class="copy">Copyright ©</span>
-    	<span class="tn-primary">Tech</span>
-    	<span class="tn-secondary">Ninja</span>
-    	<span class="tn-slogan">| Web &amp; IT</span>
-    </div>
     <script src="./js/main.js"></script>
     <script src="./js/quote.builder.js"></script>
 

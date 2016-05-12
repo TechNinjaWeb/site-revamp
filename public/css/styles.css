@@ -140,6 +140,12 @@ nav { z-index: 5; }
 .navigation .navbar-brand {
     position: absolute;
     font-size: 44px;
+    color: #B7B7B7;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #AFB4FF;
+    background-color: transparent;
 }
 
 .navigation .logo {
@@ -318,6 +324,11 @@ nav { z-index: 5; }
     background-color: #fff;
 }
 
+.portfolio-grid{ 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .portfolio .navbar.navbar-default {
     position: absolute;
     width: 100%;
@@ -392,6 +403,7 @@ nav { z-index: 5; }
 
 .portfolio .portfolio-item {
     margin-bottom: 20px;
+    /*max-height: 270px;*/
 }
 
 .portfolio .special-title {
@@ -556,22 +568,29 @@ nav { z-index: 5; }
 .contact {
     position: relative;
     min-height: 76vh;
+    /*margin-bottom: 100px;*/
+    flex-direction: column;
     display: flex;
-    background-color: black;
+    background-color: #6F2146;
     color: #fff;
     z-index: 0;
 }
 
-.contact .inner {
-    margin: 30px auto;
+.contact .special-title {
+    margin-top: 50px;
 }
+
+.contact .flex-container {
+    margin-bottom: 70px;
+}
+
 .contact .message, .contact .phone-box {
     padding-left: 50px;
     margin-right: 50px;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 
-.contact:after {
+.contact:before{
     position: absolute;
     top: 0;
     left: 0;
@@ -590,6 +609,18 @@ nav { z-index: 5; }
     z-index: -1;
     overflow: hidden;
 }
+
+/*.contact:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6F2146;
+    overflow: hidden;
+    z-index: -2;
+}*/
 
 .contact .contact-box {
     position: relative;
