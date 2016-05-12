@@ -117,17 +117,19 @@ var app = angular.module('app', [
         console.warn("Data", data);
         // Set Users Email
         data.email = email;
-        $http({
-            method: 'POST',
-            url: Backand.getApiUrl() + '/1/objects/quotes?returnObject=true',
-            data: data
-        }).success(function(res){
-        	console.log("Posted .. Toastr This", res);
-        	toastr.success("Thank You! We've Sent An Email To: " + email);
-        }).error(function(err){
-        	console.warn(err);
-        });
+        // $http({
+        //     method: 'POST',
+        //     url: Backand.getApiUrl() + '/1/objects/quotes?returnObject=true',
+        //     data: data
+        // }).success(function(res){
+        // 	console.log("Posted .. Toastr This", res);
+        // 	toastr.success("Thank You! We've Sent An Email To: " + email);
+        // }).error(function(err){
+        // 	console.warn(err);
+        // });
         // Redundant return
+        // Debugging
+        toastr.success("Thank You! We've Sent An Email To: " + email);
         return {email: email, quote: quote};
     };
 
