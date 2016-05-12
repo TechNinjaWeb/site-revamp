@@ -713,23 +713,23 @@
 			            	We can't wait to help bring your ideas to life.
 			            </p>
 			            <div class="social-media">
-			            	<button class="facebook col-xs-2" href="https://facebook.com/4umninja">
+			            	<button class="facebook col-xs-2">
 			            		<i class="fa fa-lg fa-facebook">
 			            		</i>
 			            	</button>
-			            	<button class="twitter col-xs-2" href="https://twitter.com/4umninja">
+			            	<button class="twitter col-xs-2">
 			            		<i class="fa fa-lg fa-twitter">
 			            		</i>
 			            	</button>
-			            	<button class="google col-xs-2" href="https://google.com/4umninja">
+			            	<button class="google col-xs-2">
 			            		<i class="fa fa-lg fa-google-plus">
 			            		</i>
 			            	</button>
-			            	<button class="youtube col-xs-2" href="https://youtube.com/Phreelyfe">
+			            	<button class="youtube col-xs-2">
 			            		<i class="fa fa-lg fa-youtube">
 			            		</i>
 			            	</button>
-			            	<button class="website col-xs-2" mail-to="info@tech-ninja.ca">
+			            	<button class="website col-xs-2">
 			            		<i class="fa fa-lg fa-envelope">
 			            		</i>
 			            	</button>
@@ -745,7 +745,8 @@
 			            		},
 			            		socialMediaLinks = $('.social-media')
 			            			.on('click', function(e){
-			            				var className = e.target.parentElement.className,
+
+			            				var className = e.target.parentElement.classList[0].split('-')[0],
 			            					sendTo = urls[ className ];
 
 			            				console.warn(["Clicked E", e], ["Sending To", sendTo]);

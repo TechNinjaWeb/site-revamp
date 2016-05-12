@@ -562,6 +562,9 @@ nav { z-index: 5; }
     z-index: 0;
 }
 
+.contact .inner {
+    margin: 30px auto;
+}
 .contact .message, .contact .phone-box {
     padding-left: 50px;
     margin-right: 50px;
