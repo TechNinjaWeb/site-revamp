@@ -28,6 +28,7 @@ a[class="-default"], .btn {
 
 .inner {
     position: relative;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     z-index: 1;
@@ -222,7 +223,7 @@ nav { z-index: 5; }
 
 .services {
     position: relative;
-    height: 74vh;
+    min-height: 74vh;
     background-color: #5E5E5E;
     overflow: hidden;
 }
@@ -298,12 +299,13 @@ nav { z-index: 5; }
 .services .slide {
     color: #fff;
     margin: auto 100px;
+    margin-bottom: 50px;
 }
 
 .services .slide .caption {
     margin-top: 20px;
     margin-bottom: 40px;
-    width: 400px;
+    max-width: 400px;
 }
 
 .services .slide .title {
@@ -314,8 +316,8 @@ nav { z-index: 5; }
 
 .services .slide-image img {
     width: 400px;
-    margin-top: -250px;
-    opacity: 0.1;
+    margin-top: -210px;
+    /*opacity: 0.1;*/
 }
 
 .portfolio {
@@ -639,11 +641,11 @@ nav { z-index: 5; }
 
 .contact .social-media {
     margin-top: 50px;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .contact .social-media button {
-    width: 62px;
+    min-width: 50px;
     background-color: transparent;
     border: none;
 }
@@ -749,6 +751,7 @@ nav { z-index: 5; }
 .form-container .contact-message {
     width: 100%;
     border-color: #B3B3B3;
+    resize: none;
 }
 
 .form-container button {
