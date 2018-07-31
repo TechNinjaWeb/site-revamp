@@ -1,5 +1,3 @@
-console.log("Got it!");
-
 var screenOffset = document.body.offsetHeight,
        menu = $('.navigation .navbar-default');
  var enabled = false;
@@ -10,6 +8,14 @@ var screenOffset = document.body.offsetHeight,
 
 $(document).on('scroll', function(e) {
 	toggleBg( menu )
+});
+
+$('.learn-more').on('click', function(e) {
+	window.scroll({
+	  top: $('.contact')[0].offsetTop,
+	  left: 0,
+	  behavior: 'smooth'
+	});
 });
 
 function toggleBg( element )  {

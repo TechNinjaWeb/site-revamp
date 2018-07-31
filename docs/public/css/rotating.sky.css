@@ -1,0 +1,56 @@
+.rotating-sky-container {
+  position: fixed;
+  overflow-x: hidden;
+  margin: 0;
+  margin-top: -24px;
+  z-index: -1;
+}
+
+.rotating-sky {
+  position: relative;
+  margin: 0 auto;
+  margin-top: -200px;
+  margin-left: -1200px;
+  /*width: 100%;
+  height: 100%;*/
+  overflow: hidden;
+  z-index: 1;
+  transform: scale(1.2);
+}
+
+.tree {
+  z-index: 2;
+  overflow: hidden;
+}
+.tree:before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 662px;
+    bottom: 30px;
+    /*left: -127px;*/
+    left: -340px;
+    color: white;
+    background: url('../assets/home/tree.png') no-repeat;
+    z-index: -1;
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+.rotating-sky:after {
+  content: "";
+  display: block;
+  position: static;
+  /*width: 4400px;*/
+  width: 4000px;
+  height: 2900px;
+  top: -125px;
+  left: 125px;
+  background: url('../assets/bg/stars_nobg.png') repeat top left;
+  background-color: black;
+  background-blend-mode: screen;
+  -moz-animation: spin 1000s linear infinite;
+  -webkit-animation: spin 1000s linear infinite;
+  animation: spin 1000s linear infinite;
+  overflow: hidden;
+}

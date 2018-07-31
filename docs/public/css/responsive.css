@@ -1,0 +1,630 @@
+@media (max-width: 768px)  and (orientation: portrait) { /* TARGET PHONE ONLY */
+    .vcenter {
+      margin-top: 34%;
+    }
+
+    .services .nav.navbar-nav {
+        background-color: #2F2F2F;
+    }
+    
+    .portfolio .navbar-default .navbar-collapse {
+        /*background-color: white;*/
+        float: none;
+    }
+
+    .portfolio .navbar-collapse:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        right: 0;
+        background-color: black;
+        width: 133px;
+        height: 172px;
+    }
+
+    .portfolio .navigation ul {
+        margin-top: 0;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin: auto;
+    }
+
+    .portfolio .navigation li {
+        margin-right: 20px;
+        font-size: 6vw;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin-right: 0;
+    }
+    .portfolio .navigation .navbar-default {
+        background-color: transparent;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a {
+        text-decoration: none;
+        color: #839ACF;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a:hover {
+        color: #E4861F;
+    }
+
+    .testimonials span {
+        margin: 4px 10px;
+    }
+
+    .slide-container {
+        /*margin: 0;*/
+        /*max-width: 830px;*/
+        /*text-align: right;*/
+        /*margin-left: 30%;*/
+    }
+
+    .slider .slide {
+        position: fixed;
+        top: 5%;
+        z-index: -1
+    }
+
+    .slider .slide .title, .slider .slide .caption {
+        max-width: 760px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .slider .slide .title {
+        font-size: 8vw;
+        line-height: 50px;
+        color: #AFBCFF;
+        -webkit-text-stroke: 0.5px #5A76AC;
+    }
+
+    .slider .slide .title-bold {
+        display: block;
+        color: #768BFF;
+        font-size: 10vw;
+        line-height: 38px;
+    }
+
+    .slider .slide .caption {
+        margin-top: 20px;
+        color: #EFF2FF;
+    }
+
+    .quote-box {
+      display: block;
+    }
+
+    .quote-box .instructions, .quote-box .quote-accordian {
+      display: inline-block;
+    }
+    .contact {
+        /*height: 170vh;*/
+    }
+    .contact .flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact .special-title {
+        margin-top: 50px;
+    }
+
+    .contact .message {
+        margin-top: 13%;
+    }
+
+    .contact .flex-container {
+        /*margin-top: -100px;*/
+
+    }
+    .contact .flex-container > div {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px)  and (orientation: portrait) { /* EVERYTHING IN BETWEEN */
+    .vcenter {
+      margin-top: 50%;
+    }
+    
+    .portfolio .navbar-default .navbar-collapse {
+        /*background-color: white;*/
+        float: none;
+    }
+
+    .portfolio .navbar-collapse:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        right: 0;
+        background-color: black;
+        width: 133px;
+        height: 172px;
+    }
+
+    .portfolio .navigation ul {
+        margin-top: 20px;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin: auto;
+    }
+
+    .portfolio .navigation li {
+        margin-right: 20px;
+        font-size: 2vw;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin-right: 0;
+    }
+    .portfolio .navigation .navbar-default {
+        background-color: transparent;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a {
+        text-decoration: none;
+        color: #839ACF;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a:hover {
+        color: #E4861F;
+    }
+
+    .testimonials span {
+        margin: 20px 10px;
+    }
+
+    .slide-container {
+        margin: 0;
+        max-width: 830px;
+        text-align: right;
+        margin-left: 30%;
+    }
+
+    .slider .slide {
+        position: fixed;
+        top: 5%;
+        z-index: -1
+    }
+
+    .slider .slide .title, .slider .slide .caption {
+        max-width: 760px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .slider .slide .title {
+        font-size: 6vw;
+        line-height: 56px;
+        color: #AFBCFF;
+        -webkit-text-stroke: 0.5px #5A76AC;
+    }
+
+    .slider .slide .title-bold {
+        display: block;
+        color: #768BFF;
+        font-size: 6vw;
+    }
+
+    .slider .slide .caption {
+        margin-top: 20px;
+        color: #EFF2FF;
+    }
+
+    .quote-box {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+    .contact {
+        height: 70vh;
+    }
+    .contact .flex-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .contact .special-title {
+        margin-top: 50px;
+    }
+
+    .contact .message {
+        margin-top: 13%;
+    }
+
+    .contact .flex-container {
+        margin-top: -100px;
+
+    }
+    .contact .flex-container > div {
+        flex-basis: 50%;
+    }
+}
+
+/*ORITENTATION LANDSCAPE*/
+
+@media (max-width: 768px)  and (orientation: landscape) { /* TARGET PHONE ONLY */
+    .vcenter {
+      margin-top: 30%;
+    }
+
+    .services .nav.navbar-nav {
+        background-color: #2F2F2F;
+    }
+    
+    .portfolio .navbar-default .navbar-collapse {
+        /*background-color: white;*/
+        float: none;
+    }
+
+    .portfolio .navbar-collapse:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        right: 0;
+        background-color: black;
+        width: 133px;
+        height: 172px;
+    }
+
+    .portfolio .navigation ul {
+        margin-top: 20px;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin: auto;
+    }
+
+    .portfolio .navigation li {
+        margin-right: 20px;
+        font-size: 2vw;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin-right: 0;
+    }
+    .portfolio .navigation .navbar-default {
+        background-color: transparent;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a {
+        text-decoration: none;
+        color: #839ACF;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a:hover {
+        color: #E4861F;
+    }
+
+    .testimonials span {
+        margin: 0 10px;
+    }
+
+    .slide-container {
+        margin: 0;
+        max-width: 830px;
+        text-align: right;
+        margin-left: 30%;
+    }
+
+    .slider .slide {
+        position: fixed;
+        top: 5%;
+        z-index: -1
+    }
+
+    .slider .slide .title, .slider .slide .caption {
+        max-width: 760px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .slider .slide .title {
+        font-size: 6vw;
+        line-height: 40px;
+        color: #AFBCFF;
+        -webkit-text-stroke: 0.5px #5A76AC;
+    }
+
+    .slider .slide .title-bold {
+        display: block;
+        color: #768BFF;
+        font-size: 6vw;
+    }
+
+    .slider .slide .caption {
+        margin-top: 20px;
+        color: #EFF2FF;
+    }
+
+    .quote-box {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+    .contact {
+        height: 155vh;
+    }
+    .contact .flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact .special-title {
+        margin-top: 50px;
+    }
+
+    .contact .message {
+        margin-top: 13%;
+    }
+
+    .contact .flex-container {
+        /*margin-top: -100px;*/
+
+    }
+    .contact .flex-container > div {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px)  and (orientation: landscape) { /* EVERYTHING IN BETWEEN */
+    .vcenter {
+      margin-top: 24%;
+    }
+    
+    .portfolio .navbar-default .navbar-collapse {
+        /*background-color: white;*/
+        float: none;
+    }
+
+    .portfolio .navigation ul {
+        margin-top: 20px;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin: auto;
+    }
+
+    .portfolio .navigation li {
+        margin-right: 20px;
+        font-size: 2vw;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin-right: 0;
+    }
+    .portfolio .navigation .navbar-default {
+        background-color: transparent;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a {
+        text-decoration: none;
+        color: #839ACF;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a:hover {
+        color: #E4861F;
+    }
+
+    .testimonials span {
+        margin: 0 10px;
+    }
+
+    .slide-container {
+        margin: 0 auto;
+        /*max-width: 830px;*/
+        text-align: right;
+        /*margin-left: 30%;*/
+    }
+
+    .slider .slide {
+        position: fixed;
+        top: 5%;
+        z-index: -1
+    }
+
+    .slider .slide .title, .slider .slide .caption {
+        max-width: 760px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .slider .slide .title {
+        font-size: 6vw;
+        line-height: 56px;
+        color: #AFBCFF;
+        -webkit-text-stroke: 0.5px #5A76AC;
+    }
+
+    .slider .slide .title-bold {
+        display: block;
+        color: #768BFF;
+        font-size: 6vw;
+    }
+
+    .slider .slide .caption {
+        margin-top: 20px;
+        color: #EFF2FF;
+    }
+
+    .quote-box {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+    .contact {
+        height: 90vh;
+    }
+    .contact .flex-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .contact .special-title {
+        margin-top: 50px;
+    }
+
+    .contact .message {
+        margin-top: 16%;
+    }
+
+    .contact .flex-container {
+        margin-top: -100px;
+
+    }
+    .contact .flex-container > div {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) { /* DESKTOP ONLY */
+    .vcenter {
+      margin-top: 20%;
+    }
+    
+    .portfolio .navbar-default .navbar-collapse {
+        /*background-color: white;*/
+        float: none;
+    }
+
+    .portfolio .navigation ul {
+        margin-top: 20px;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin: auto;
+    }
+
+    .portfolio .navigation li {
+        margin-right: 20px;
+        font-size: 2vw;
+    }
+
+    .portfolio .navigation li:last-child {
+        margin-right: 0;
+    }
+    .portfolio .navigation .navbar-default {
+        background-color: transparent;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a {
+        text-decoration: none;
+        color: #839ACF;
+    }
+
+    .portfolio .navigation .navbar-default .navbar-nav>li>a:hover {
+        color: #E4861F;
+    }
+
+    .testimonials span {
+        margin: 0 10px;
+    }
+
+    .slide-container {
+        margin: 0;
+        max-width: 830px;
+        text-align: right;
+        margin-left: 30%;
+    }
+
+    .slider .slide {
+        position: fixed;
+        top: 5%;
+        z-index: -1
+    }
+
+    .slider .slide .title, .slider .slide .caption {
+        max-width: 760px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .slider .slide .title {
+        font-size: 6vw;
+        line-height: 56px;
+        color: #AFBCFF;
+        -webkit-text-stroke: 0.5px #5A76AC;
+    }
+
+    .slider .slide .title-bold {
+        display: block;
+        color: #768BFF;
+        font-size: 6vw;
+    }
+
+    .slider .slide .caption {
+        margin-top: 20px;
+        color: #EFF2FF;
+    }
+
+    .quote-box {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+    .contact {
+        height: 90vh;
+    }
+    .contact .flex-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .contact .special-title {
+        margin-top: 50px;
+    }
+
+    .contact .message {
+        margin-top: 18%;
+    }
+
+    .contact .flex-container {
+        margin-top: -100px;
+
+    }
+    .contact .flex-container > div {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1200px) { /* Desktop HD */
+    .slide-container {
+        margin: 0;
+        max-width: 830px;
+        text-align: right;
+        margin-left: 30%;
+    }
+
+    .slider .slide {
+        position: fixed;
+        top: 36%;
+        z-index: -1
+    }
+
+    .slider .slide .title, .slider .slide .caption {
+        max-width: 760px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .slider .slide .title {
+        font-size: 6vw;
+        line-height: 56px;
+        color: #AFBCFF;
+        -webkit-text-stroke: 0.5px #5A76AC;
+    }
+
+    .slider .slide .title-bold {
+        display: block;
+        color: #768BFF;
+        font-size: 6vw;
+    }
+
+    .slider .slide .caption {
+        margin-top: 20px;
+        color: #EFF2FF;
+    }      
+
+    .contact .message {
+        margin-top: 8%;
+    }
+
+    .contact .phone-box {
+        margin-top: -100px;
+    }
+}

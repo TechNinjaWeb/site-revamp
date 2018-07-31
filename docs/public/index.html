@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tech Ninja | Web &amp; IT</title>
+    <meta name="description" content="Tech Ninja | Web &amp; IT Advanced Web Applications">
+    <meta name="author" content="4UmNinja">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Toastr Plugin CSS -->
+    <link rel="stylesheet" type="text/css" href="./vendor/toastr/toastr.css"/>
+    <!-- Animate.CSS -->
+    <link rel="stylesheet" type="text/css" href="./vendor/animate.css/animate.css"/>
+
+    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/const.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/rotating.sky.css">
+    <link rel="stylesheet" href="css/quote.builder.css">
+	
+	<!-- Backup CDN -->
+	<!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.css"/> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"> -->
+    <!--<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="https://cdn.backand.net/backand/dist/1.8.2/backand.min.js"></script>-->
+
+    <script src="./vendor/jquery/jquery.js"></script>
+    <script src="./vendor/jquery/jquery.color.js"></script>
+    <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+	<!-- Custom TN -->
+	<script src="./js/prototypes.js"></script>
+    <!-- Angular -->
+    <script src="./vendor/angular/angular.js"></script>
+    <script src="./vendor/angular-ui-router/release/angular-ui-router.js"></script>
+	<!-- Backand Server -->
+    <script src="./vendor/backand/backand.min.js"></script>
+
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>	
+	<div ui-view></div>
+    <div class="page">
+    	<a name="home-anchor"></a>
+        <div class="slider wrapper">
+        	<div class="rotating-sky-container">
+        		<div class="rotating-sky"></div>
+        	</div>
+        	<div class="tree"></div>
+            <div class="slide-container">
+            	<div class="slide inner">
+	                <div class="title vcenter text-shadow">
+	                	Web Presence 
+	                	<strong class="title-bold">That'll get you noticed</strong>
+	                </div>
+	                <div class="caption">
+	                	You're a unique organization of ideas and motivations.
+	                	Our goal is to channel your essense into beautiful things
+	                	that grow your business.
+	                </div>
+	            </div>
+            </div>
+            <div class="navigation">
+	            <nav class="navbar navbar-default nav-links">
+	                <div class="inner">
+	                	<div class="navbar-header">
+		                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+		                        <span class="sr-only">Toggle navigation</span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                        <span class="icon-bar"></span>
+		                    </button>
+		                    <a class="navbar-brand" href="#">
+								<img class="logo" src="./assets/brand/logo.png" alt="Tech Ninja | Web &amp; IT">
+			                    <span class="tn-primary">tech</span><span class="tn-secondary">ninja</span>
+			                    <span class="slogan">Web &amp; IT</span>
+		                    </a>
+		                </div>
+		                <div class="collapse navbar-collapse" id="main-nav">
+			                <ul class="nav navbar-nav list-unstyled list-inline pull-right">
+			                    <li class="nav-link"><a href="#home-anchor" onclick="scrollToAnchor('home-anchor')">Home</a></li>
+			                    <li class="nav-link"><a href="#services-anchor" onclick="scrollToAnchor('services-anchor')">Services</a></li>
+			                    <li class="nav-link"><a href="#portfolio-anchor" onclick="scrollToAnchor('portfolio-anchor', -60)">Portfolio</a></li>
+			                    <li class="nav-link"><a href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">Contact</a></li>
+			                </ul>
+			            </div>
+	                </div>
+	            </nav>
+	        </div>
+	        <script>
+	        	function scrollToAnchor(aid, offset){
+	        		if (!offset) offset = 0;
+				    var aTag = $("a[name='"+ aid +"']");
+				    // console.warn("Scrolling to", aTag.offset().top + offset, arguments);
+				    $('html,body').animate({scrollTop: aTag.offset().top + offset},'slow');
+				}
+	        </script>
+        </div>
+        <div id="services" class="services">
+        	<a name="services-anchor"></a>
+			<div class="nav-bg"></div>
+			<div class="inner">
+			    <a class="no-style" href="#services-anchor" onclick="scrollToAnchor('services-anchor')">
+			        <div class="special-title">
+			            <div class="title shadow"><strong>What</strong> We Do</div>
+			        </div>
+			    </a>
+			    <div class="slides-container">
+			    	<div class="slide fadeIn animated active hidden digital">
+				        <div class="slide-details">
+					        <div class="title">Digital Media</div>
+					        <div class="caption">
+					            We employ industry standards for any multimedia production you're
+					            planning. 
+					            <br><br>
+					            Have us put something together for your next meetup
+					            or conference.
+					        </div>
+				        <button class="learn-more">Learn More</button>
+				    </div>
+				        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/media-transparent.png" alt=""></div>
+				    </div>
+				    <div class="slide fadeIn animated hidden branding">
+				        <div class="slide-details">
+					        <div class="title">Branding</div>
+					        <div class="caption">
+					            Your business is a special part of who you are and
+					            your image is an important detail.
+					            <br><br>
+					            We build brands that resonate with you at it's core.
+					        </div>
+					        <button class="learn-more">Learn More</button>
+					    </div>
+				        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/card-transparent.png" alt=""></div>
+				    </div>
+				    <div class="slide fadeIn animated hidden web">
+				        <div class="slide-details">
+					        <div class="title">Web Development</div>
+					        <div class="caption">
+					            We use proven technologies to get the job done right the first time.
+					            <br><br>
+					            From photo galleries to real time chat sites, we've got the right tools.
+					        </div>
+					        <button class="learn-more">Learn More</button>
+					    </div>
+					        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/imac-transparent.png" alt=""></div>
+				    </div>
+				    <div class="slide fadeIn animated hidden apps">
+				        <div class="slide-details">
+					        <div class="title">Smart Apps</div>
+					        <div class="caption">
+					            Both the world and your business is ever changing. 
+								<br><br>
+					            Smart apps give you the power to monitor your ROI while
+					            engaging retention and loyalty.
+					        </div>
+					        <button class="learn-more">Learn More</button>
+					    </div>
+				        <div class="slide-image pull-right"><img class="img-responsive" src="./assets/home/iphone-transparent.png" alt=""></div>
+				    </div>
+			    </div>
+			    <nav class="navbar navbar-default">
+			        <div class="navbar-header">
+			            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#services-nav" aria-expanded="false">
+			                <span class="sr-only">Toggle navigation</span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			            </button>
+			        </div>
+			        <!-- Collect the nav links, forms, and other content for toggling -->
+			        <div class="collapse navbar-collapse" id="services-nav">
+			            <ul class="nav navbar-nav pull-right">
+			                <li class="service-link active" data-rel="digital">
+			                    <a href="#">
+			                        <i class="fa fa-lg fa-file-audio-o inset-text"></i>
+			                        <span class="title inset-text">Media</span>
+			                    </a>
+			                </li>
+			                <li class="service-link" data-rel="branding">
+			                    <a href="#">
+			                        <i class="fa fa-lg fa-gears inset-text"></i>
+			                        <span class="title inset-text">Branding</span>
+			                    </a>
+			                </li>
+			                <li class="service-link" data-rel="web">
+			                    <a href="#">
+			                        <i class="fa fa-lg fa-keyboard-o inset-text"></i>
+			                        <span class="title inset-text">Websites</span>
+			                    </a>
+			                </li>
+			                <li class="service-link" data-rel="apps">
+			                    <a href="#">
+			                        <i class="fa fa-lg fa-mobile inset-text"></i>
+			                        <span class="title inset-text">Apps</span>
+			                    </a>
+			                </li>
+			            </ul>
+			        </div>
+			        <!-- /.navbar-collapse -->
+			        <script>
+			        $(function(){
+			        	var time = 100,
+			        		selectedClass = "",
+				        	slides = $('.services .slide')
+				        		.map(function(i, e){
+				        			$(e).filter('.active').removeClass('hidden');
+				        		}),
+				        	nav = $('.services .service-link')
+				            .click(function(evt, element) {
+				                evt.preventDefault();
+				                var self = this;
+				                nav.map(function(i, e) {
+				                    e.classList.remove('active');
+				                    $(self).addClass('active');
+				                }, nav)
+
+				                selectedClass = $(self).attr("data-rel"); 
+								console.log("Selected Class", selectedClass, $(self));
+						     	
+						     	$(".slides-container").fadeTo(time, 0.1, function(complete){
+						     		$(".services .slide").not("."+selectedClass).removeClass('active').addClass('hidden');
+
+						     		setTimeout(function() {
+						      		$(".slides-container ."+selectedClass).removeClass('hidden').addClass('active')
+						      		
+
+						      		$(".slides-container").fadeTo(time, 1);
+						    	}, 300);
+						     	});
+				            });
+			        });
+			        </script>
+			    </nav>
+			</div>	
+    	</div>
+        <div class="portfolio wrapper">
+        	<a name="portfolio-anchor"></a>
+            <nav class="navbar navbar-default">
+				  <div class="navbar-header">
+				    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-nav" aria-expanded="false">
+				      <span class="sr-only">Toggle navigation</span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				    </button>
+				  </div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="portfolio-nav">
+				    <ul class="nav navbar-nav pull-right">
+				        <li class="portfolio-link active">
+				            <button class="btn fil-cat" data-rel="all">
+				                <span class="title inset-text">All</span>
+				            </button>
+				        </li>
+				        <li class="portfolio-link">
+				            <button class="btn fil-cat" data-rel="digital">
+				                <span class="title inset-text">Media</span>
+				            </button>
+				        </li>
+				        <li class="portfolio-link">
+				            <button class="btn fil-cat" data-rel="branding">
+				                <span class="title inset-text">Branding</span>
+				            </button>
+				        </li>
+				        <li class="portfolio-link">
+				            <button class="btn fil-cat" data-rel="web">
+				                <span class="title inset-text">Websites</span>
+				            </button>
+				        </li>
+				        <li class="portfolio-link">
+				            <button class="btn fil-cat" data-rel="apps">
+				                <span class="title inset-text">Smart Apps</span>
+				            </button>
+				        </li>
+				    </ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+            <div class="inner">
+            	<a class="no-style" href="#portfolio-anchor" onclick="scrollToAnchor('portfolio-anchor', -60)">
+	            	<div class="special-title">
+		                <div class="title shadow"><strong>Our</strong> Work</div>
+		            </div>
+	            </a>
+	            <div id="portfolio" class="portfolio-grid flex-container">
+	                <div class="portfolio-item col-sm-4 col-md-3 branding digital web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/amma-construction.png" alt="">
+	                        <div class="title">AMMA Construction</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/annies-repurpose.png" alt="">
+	                        <div class="title">Annies Repurpose</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 branding web digital all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/bluebook-business.png" alt="">
+	                        <div class="title">Bluebook Business</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/dfc-diesel.png" alt="">
+	                        <div class="title">DFC Diesel</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/evo-power.png" alt="">
+	                        <div class="title">Evolution Power</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/nitro-tech.png" alt="">
+	                        <div class="title">Nitro Tech</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 digital web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/room-xi.png" alt="">
+	                        <div class="title">Room XI</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/smoke-em.png" alt="">
+	                        <div class="title">Smoke Em Diesel</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/uncle-bear-spices.png" alt="">
+	                        <div class="title">Uncle Bear Spices</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/noel-construction_.png" alt="">
+	                        <div class="title">Noel Construction</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 web digital branding all">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/portfolio/feri-designer.png" alt="">
+	                        <div class="title">Feri Designer Lines</div>
+	                    </div>
+	                </div>
+	                <div class="portfolio-item col-sm-4 col-md-3 apps">
+	                    <div class="portfolio-container light-shadow">
+	                        <img class="portfolio-img img-responsive" src="./assets/home/tmp-portfolio-img.png" alt="">
+	                        <div class="title">Coming Soon</div>
+	                    </div>
+	                </div>
+	            </div>
+	            <script>
+		            $(function() {
+						var el, selectedClass = "",
+							links = $('.portfolio-link, .portfolio-link.active');
+							$(".portfolio-link > .fil-cat").click(function(e){
+								links.map(function(i, element){
+									var target = e.target.offsetParent;
+										element.classList.remove('active');
+										target.classList.add('active');
+								});
+								selectedClass = $(this).attr("data-rel"); 
+								// console.log("Selected Class", selectedClass);
+					     	$("#portfolio").fadeTo(100, 0.1);
+							$("#portfolio .portfolio-item").not("."+selectedClass).fadeOut().removeClass('scale-anm');
+					    	setTimeout(function() {
+					      		$("."+selectedClass).fadeIn().addClass('scale-anm');
+					      		$("#portfolio").fadeTo(300, 1);
+					    	}, 300);
+						});
+
+						$('.fil-cat').first().click();
+
+						var items = $('.portfolio-item').click(function(evt){
+							var el = $(evt.target),
+								src = el.filter('img').prop('src'),
+								title = el.parent().children().filter('.title').html();
+
+							var modal = $('#pageModal'),
+					            modalContent = $('#pageModal .modal-content'),
+					            modalTitle = modalContent.children().filter('.modal-header').children().filter('.modal-title'),
+					            modalText = modalContent.children().filter('.modal-body').children().filter('.modal-body-text'),
+					            modalFooter = modalContent.children().filter('.modal-footer');
+
+
+					        modalTitle.html(title), 
+					        console.log("Modal Title", title),
+					        modalText.html( $('<img>').addClass('img-responsive').prop('src', src) );
+					        modal.modal('show');
+
+							console.log("Href", src);
+						})
+					});
+				</script>
+            </div>
+        </div>
+        <div class="testimonials wrapper norm-shadow">
+        	<div class="inner">
+        		<span class="nav-left"><i class="fa fa-lg fa-chevron-circle-left"></i></span>
+        		<ul class="testimonials-container list-unstyled">
+        			<li class="testimonial active">
+        				<div class="logo col-xs-12 col-sm-2 col-sm-offset-2">
+		        			<div class="client-logo">
+		        				<img class="img-responsive" src="./assets/logos/th-logo.png" alt="">
+		        			</div>
+		        		</div>
+		        		<div class="testimony col-xs-12 col-sm-7">
+		        			<div class="title">Trenderz Hub</div>
+		        			<i class="body">
+		        				is simply dummy text of the printing and typesetting 
+		        				industry. Lorem Ipsum has been the industry's standard 
+		        				dummy text ever since the 1500s.
+		        			</i>
+		        		</div>
+        			</li>
+        			<li class="testimonial hidden">
+        				<div class="logo col-xs-12 col-sm-2 col-sm-offset-2">
+		        			<div class="client-logo">
+		        				<img class="img-responsive" src="./assets/logos/th-logo.png" alt="">
+		        			</div>
+		        		</div>
+		        		<div class="testimony col-xs-12 col-sm-7">
+		        			<div class="title">Trenderz Hub</div>
+		        			<i class="body">
+		        				Kennith is a sly devil, dastardly, nogood, ramsack of a 
+		        				fellow. I mean one day I almost straigh out an puched him
+		        				in the arm through the teetch for smack talking me so much.
+		        				Why I aughta!
+		        			</i>
+		        		</div>
+        			</li>
+        			<li class="testimonial hidden">
+        				<div class="logo col-xs-12 col-sm-2 col-sm-offset-2">
+		        			<div class="client-logo">
+		        				<img class="img-responsive" src="./assets/logos/th-logo.png" alt="">
+		        			</div>
+		        		</div>
+		        		<div class="testimony col-xs-12 col-sm-7">
+		        			<div class="title">Trenderz Hub</div>
+		        			<i class="body">
+		        				Billy bob is my dog, and he is the best dog a boy could
+		        				ever ask for. I mean he once took a chip on the shoulder
+		        				from a flying squirell and almost got rabies from the 
+		        				neighbors gerble. 
+		        			</i>
+		        		</div>
+        			</li>
+        		</ul>
+        		<span class="nav-right"><i class="fa fa-lg fa-chevron-circle-right"></i></span>
+        	</div>
+        	<script>
+
+        		$(function() {
+					var el, time = 5000, interval, btns = $(''),
+						testimonials = $('.testimonials-container'),
+						testimonialNav = $('.testimonials .nav-right, .testimonials .nav-left');
+
+					$('.testimonials').on('mouseleave', function(e){ playAnimation();});
+					$('.testimonials').on('mouseover', function(e){ stopAnimation();});
+
+					playAnimation()
+
+	        		testimonialNav.click(function(evt){
+	        			var testimonials = $('.testimonials-container'),
+	        				direction = getDirection( evt ),
+        					active = $('.testimonial.active');
+
+    					transition( active, direction );
+
+	        			function getDirection( event ) {
+	        				var target = event.target;
+	        				return target.className.split('-')[ target.className.split('-').length - 1 ]
+	        			}
+	        		})
+
+	        		function playAnimation(){
+	        			interval = setInterval(function(){
+	        				active = $('.testimonial.active');
+	        				transition( active, 'right');
+	        			}, time);
+	        		}
+	        		window.playAnim = playAnimation;
+	        		window.stopAnim = stopAnimation;
+	        		function stopAnimation(){
+	        			clearInterval(interval);
+	        		}
+
+	        		function next( el ) {
+        				if (el.next().length !== 0) el.next().fadeIn().removeClass('hidden').addClass('active');
+        				else testimonials.children().first().fadeIn().removeClass('hidden').addClass('active');
+        			}
+
+        			function prev( el ) {
+        				if (el.prev().length !== 0) el.prev().fadeIn().removeClass('hidden').addClass('active');
+        				else testimonials.children().last().fadeIn().removeClass('hidden').addClass('active');
+        			}
+
+	        		function transition( active, direction ) {
+        				active.fadeOut().removeClass('active').addClass('hidden');
+        				if (direction === 'right') next( active );
+        				if (direction === 'left') prev( active );
+        			}
+				});
+
+
+        	</script>
+        </div>
+        <div class="quotes wrapper">
+            <a name="quotes-anchor"></a>
+            <div class="inner">
+            	<a class="no-style" href="#quotes-anchor" onclick="scrollToAnchor('quotes-anchor', -50)">
+	            	<div class="special-title">
+		                <div class="title shadow"><strong>Quote</strong> Builder</div>
+		            </div>
+	            </a>
+	            <div class="quote-box flex-container">
+	                <div class="instructions col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1">
+	                	<div class="body">
+							Use this tool to help you estimate
+							the work you'll need for your next job.
+						</div>
+						
+	                    <div class="output-container">
+	                    	<span class="dollar-span">$</span>
+	                    	<div class="output"></div>
+	                    </div>
+
+						<div class="disclaimer">
+							Please note that quotes are to be used as a
+							reference and not indicitive of final pricing.
+
+							<strong class="fine-print">
+								* Additional design, development, or alterations
+								are not included. Please contact us directly
+								for more information.
+							</strong>
+						</div>
+						<button class="btn btn-success sendQuoteBtn hidden" ng-controller="main">Get A Copy</button>
+	                </div>
+	            	<div class="quote-accordian col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-1">
+	                    <h3 class="quote-box-title">Build A Quote</h3>
+	                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingOne">
+	                                <h4 class="panel-title">
+					                	<a class="no-style" role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteMedia" aria-expanded="true" aria-controls="quoteMedia">Media</a>
+					                </h4>
+	                            </div>
+	                            <div id="quoteMedia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+	                                <div class="panel-body">
+	                                    <div class="input-grouping row">
+	                                        <label class="text-left" for="audio-samples">Audio Samples <span class="label-span">/min</span></label>
+	                                        <input name="audio-samples" type="number" class="audio-samples form-control pull-right" />
+	                                    </div>
+	                                    <div class="input-grouping row">
+	                                        <label class="text-left" for="video-samples">Video Samples <span class="label-span">/min</span></label>
+	                                        <input name="video-samples" type="number" class="video-samples form-control pull-right" />
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingTwo">
+	                                <h4 class="panel-title">
+			                            <a class="no-style collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteBranding" aria-expanded="false" aria-controls="quoteBranding">Branding</a>
+			                        </h4>
+	                            </div>
+	                            <div id="quoteBranding" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	                                <div class="panel-body">
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="logo-design">Logo Design
+	                                            <input type="checkbox" id="logo-design-checkbox" class="logo-design-checkbox" />
+	                                            <label for="logo-design-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="logo-design" type="number" class="logo-design form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="business-cards">Business Cards <span class="label-span">/200pc</span>
+	                                            <input type="checkbox" id="business-cards-checkbox" class="business-cards-checkbox" />
+	                                            <label for="business-cards-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="business-cards" type="number" class="business-cards form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="corporate-materials">Corporate Materials
+	                                            <input type="checkbox" id="corporate-materials-checkbox" class="corporate-materials-checkbox" />
+	                                            <label for="corporate-materials-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="corporate-materials" type="number" class="corporate-materials form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row">
+	                                        <label class="text-left" for="sm-banner">SM Banner</label>
+	                                        <input name="sm-banner" type="number" class="sm-banner form-control pull-right" />
+	                                    </div>
+	                                    <div class="input-grouping row">
+	                                        <label class="text-left" for="md-banner">MD Banner</label>
+	                                        <input name="md-banner" type="number" class="md-banner form-control pull-right" />
+	                                    </div>
+	                                    <div class="input-grouping row">
+	                                        <label class="text-left" for="lg-banner">LG Banner</label>
+	                                        <input name="lg-banner" type="number" class="lg-banner form-control pull-right" />
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingThree">
+	                                <h4 class="panel-title">
+						              <a class="no-style collapsed"role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteWebsites" aria-expanded="false" aria-controls="quoteWebsites">
+						                Websites
+						              </a>
+						            </h4>
+	                            </div>
+	                            <div id="quoteWebsites" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                                <div class="panel-body">
+	                                    <div class="input-grouping row">
+	                                        <label class="text-left" for="single-page">Single Page <span class="label-span">$/pg</span></label>
+	                                        <input name="single-page" type="number" class="single-page form-control pull-right" />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="dynamic-content">Dynamic Content
+	                                            <input type="checkbox" id="dynamic-content-checkbox" class="dynamic-content-checkbox" />
+	                                            <label for="dynamic-content-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="dynamic-content" type="number" class="dynamic-content form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="photo-gallery">Photo Gallery
+	                                            <input type="checkbox" id="photo-gallery-checkbox" class="photo-gallery-checkbox" />
+	                                            <label for="photo-gallery-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="photo-gallery" type="number" class="photo-gallery form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="seo-management">SEO
+	                                            <input type="checkbox" id="seo-management-checkbox" class="seo-management-checkbox" />
+	                                            <label for="seo-management-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="seo-management" type="number" class="seo-management form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="mobile-ready">Mobile Ready
+	                                            <input type="checkbox" id="mobile-ready-checkbox" class="mobile-ready-checkbox" />
+	                                            <label for="mobile-ready-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="mobile-ready" type="number" class="mobile-ready form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="template-discount">Template Discount <span class="label-span">(-$150)</span>
+	                                            <input type="checkbox" id="template-discount-checkbox" class="template-discount-checkbox" />
+	                                            <label for="template-discount-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="template-discount" type="number" class="template-discount form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="panel panel-default">
+	                            <div class="panel-heading" role="tab" id="headingThree">
+	                                <h4 class="panel-title">
+			                        	<a class="no-style collapsed"role="button" data-toggle="collapse" data-parent="#accordion" href="#quoteSmartApps" aria-expanded="false" aria-controls="quoteSmartApps">Smart Apps</a>
+			                        </h4>
+	                            </div>
+	                            <div id="quoteSmartApps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+	                                <div class="panel-body">
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="android-app">Android App
+	                                            <input type="checkbox" id="android-app-checkbox" class="android-app-checkbox" />
+	                                            <label for="android-app-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="android-app" type="number" class="android-app form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="ios-app">IOS App
+	                                            <input type="checkbox" id="ios-app-checkbox" class="ios-app-checkbox" />
+	                                            <label for="ios-app-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="ios-app" type="number" class="ios-app form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                    <div class="input-grouping row checkBox">
+	                                        <span class="text-left" for="desktop-app">Desktop App
+	                                            <input type="checkbox" id="desktop-app-checkbox" class="desktop-app-checkbox" />
+	                                            <label for="desktop-app-checkbox" class="special-checkbox"></label>
+	                                        </span>
+	                                        <input name="desktop-app" type="number" class="desktop-app form-control pull-right disabled" value="1" disabled />
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+            </div>
+        </div>
+        <ul class="dev-toolbelt list-unstyled inline wrapper norm-shadow">
+        	<li class="tool">
+        		<i class="icon-android"></i>
+        	</li>
+        	<li class="tool">
+				<i class="icon-ios"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-angular"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-joomla"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-magento"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-cordova"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-github"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-jquery"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-node"></i>
+        	</li>
+        	<li class="tool">
+        		<i class="icon-vtiger"></i>
+        	</li>
+        </ul>
+        <div class="contact">
+        	<a name="contact-anchor"></a>
+            <div class="inner">
+            	<a class="no-style" href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">
+	            	<div class="special-title">
+		                <div class="title shadow"><strong>Contact</strong> Us</div>
+		            </div>
+	            </a>
+            	<div class="flex-container">
+            		<div class="message">
+		            	<div class="heading">
+			            	We're waiting to hear from you!
+			            </div>
+			            <p class="body">
+			            	There are ninjas on standby waiting
+			            	to cary out your mission.
+			            </p>
+			            <div class="social-media">
+			            	<button class="facebook col-xs-2">
+			            		<i class="fa fa-lg fa-facebook">
+			            		</i>
+			            	</button>
+			            	<button class="twitter col-xs-2">
+			            		<i class="fa fa-lg fa-twitter">
+			            		</i>
+			            	</button>
+			            	<button class="google col-xs-2">
+			            		<i class="fa fa-lg fa-google-plus">
+			            		</i>
+			            	</button>
+			            	<button class="youtube col-xs-2">
+			            		<i class="fa fa-lg fa-youtube">
+			            		</i>
+			            	</button>
+			            	<button class="website col-xs-2">
+			            		<i class="fa fa-lg fa-envelope">
+			            		</i>
+			            	</button>
+			            </div>
+			            <script>
+			            	(function(){
+			            		var urls = {
+			            			facebook: 'https://facebook.com/4umninja',
+			            			twitter: 'https://twitter.com/4umninja',
+			            			youtube: 'https://youtube.com/Phreelyfe',
+			            			google: 'https://plus.google.com/103106753992232889434',
+			            			website: 'mailto:info@tech-ninja.ca'
+			            		},
+			            		socialMediaLinks = $('.social-media')
+			            			.on('click', function(e){
+
+			            				var className = e.target.parentElement.classList[0].split('-')[0],
+			            					sendTo = urls[ className ];
+
+			            				// console.warn(["Clicked E", e], ["Sending To", sendTo]);
+			            				if (className !== 'website') window.open( sendTo );
+			            				else window.open(sendTo);
+			            			});
+
+			            	}())
+			            </script>
+		            </div>
+		            <div class="phone-box">
+		            	<div class="contact-box">
+		            		<div class="contact-form">
+		            			<form class="form-container">
+			            			<div class="input-group">
+			            				<input id="contact-name" type="text" class="contact-name" placeholder="Full Name">
+			            			</div>
+			            			<div class="input-group">
+			            				<input id="contact-email" type="email" class="contact-email" placeholder="Email">
+			            			</div>
+			            			<div class="input-group">
+			            				<input id="contact-subject" type="text" class="contact-subject" placeholder="Subject">
+			            			</div>
+			            			<div class="input-group">
+			            				<!-- <label for="contact-message">message</label> -->
+			            				<textarea id="contact-message" type="text" class="contact-message" rows="5" cols="3" placeholder="Message"></textarea>
+			            			</div>
+			            			<button id="saveForm" ng-controller="main" onclick="send()" class="btn send-btn col-sm-8 col-sm-offset-2">Send</button>
+			            			<script>
+			            				function send(){
+			            					var inputs = angular.element('#saveForm').scope().saveForm();
+			            					angular.element('#saveForm').scope().clearForm();
+
+			            					window.toastr.success("Thank You " + inputs[0].split(' ')[0], "We'll Get Back To You Shortly", {"positionClass": "toast-bottom-left"});
+			            				}
+
+			            				$(function(){
+			            					(function play() {
+			            						// console.warn("Playing", $('#saveForm'));
+			            						$('#saveForm').addClass('animated rubberBand')
+			            							.delay(5000).queue(function(){
+			            								$(this).removeClass('animated rubberBand').dequeue();
+			            								setTimeout(play, 100);
+			            							})
+			            					}());
+			            				});
+			            			</script>
+			            		</form>
+		            		</div>
+		            	</div>
+		            </div>
+            	</div>
+            </div>
+        </div>
+        <div class="copyright wrapper text-center">
+	    	<span class="copy">Copyright ©</span>
+	    	<span class="tn-primary">Tech</span>
+	    	<span class="tn-secondary">Ninja</span>
+	    	<span class="tn-slogan">| Web &amp; IT</span>
+	    </div>
+    </div>
+
+	<!-- Modal -->
+	<div id="pageModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title"></h4>
+	      </div>
+	      <div class="modal-body">
+	        <p class="modal-body-text"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+    <script src="./js/main.js"></script>
+    <script src="./js/quote.builder.js"></script>
+
+    <script src="./vendor/sparkles/dist/jquery-canvas-sparkles.js"></script>
+	<!-- Custom Sparkle Effects -->
+    <script src="./js/sparkles.js"></script>
+	<!-- Init Angular App -->
+    <script src="./app/constants.js"></script>
+    <script src="./app/auth.service.js"></script>
+    <script src="./app/login.ctrl.js"></script>
+    <script src="./app/app.js"></script>
+
+    <script src="./vendor/toastr/toastr.js"></script>
+
+</body>
+
+</html>

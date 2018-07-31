@@ -177,7 +177,7 @@ app.config(function($stateProvider, $urlRouterProvider, BackandProvider, CONSTAN
 });
 
 app.run(function($rootScope, Backand, AuthService){
-	console.log("App Running", $rootScope);
+	// console.log("App Running", $rootScope);
 
 	window.BackAnd = Backand;
 	window.AuthService = AuthService;
