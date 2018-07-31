@@ -128,6 +128,7 @@ nav { z-index: 5; }
     margin: 0 auto;
     background-color: black;
     border: none;
+    border-radius: 0;
     height: 78px;
 }
 .navigation {
@@ -196,14 +197,14 @@ nav { z-index: 5; }
     width: 100%;
 }
 
-.slider:after {
+/*.slider:after {
     content: '';
     width: 100%;
     height: 100%;
     background-color: black;
     z-index: -2;
     position: absolute;
-}
+}*/
 
 .slider .slider-bg-container {
     position: relative;
@@ -223,7 +224,8 @@ nav { z-index: 5; }
 
 .services {
     position: relative;
-    min-height: 74vh;
+    height: 53vh;
+    max-height: 65vh;
     background-color: #5E5E5E;
     overflow: hidden;
 }
@@ -298,8 +300,13 @@ nav { z-index: 5; }
 
 .services .slide {
     color: #fff;
-    margin: auto 100px;
+    /*margin: auto 100px;*/
+    margin: auto 20px;
     margin-bottom: 50px;
+}
+
+.services .slide-details {
+    text-shadow: 1px 1px black;
 }
 
 .services .slide .caption {
@@ -316,8 +323,8 @@ nav { z-index: 5; }
 
 .services .slide-image img {
     width: 400px;
-    margin-top: -210px;
-    /*opacity: 0.1;*/
+    margin-top: -65%;
+    /*opacity: 0.2;*/
 }
 
 .portfolio {
@@ -668,6 +675,12 @@ nav { z-index: 5; }
 
 .contact .social-media i:not(:last-child) {
     margin-right: 45px;
+}
+
+.contact .usage {
+    display: inline-block;
+    font-size: 10px;
+    font-style: italic;
 }
 
 .contact-box .contact-form input {

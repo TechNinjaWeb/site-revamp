@@ -64,7 +64,7 @@
 
     .slider .slide {
         position: fixed;
-        top: 5%;
+        top: 18%;
         z-index: -1
     }
 
@@ -91,6 +91,11 @@
     .slider .slide .caption {
         margin-top: 20px;
         color: #EFF2FF;
+        line-height: 20px;
+    }
+
+    .services .slide-image img {
+        opacity: 0.1;
     }
 
     .quote-box {
@@ -212,6 +217,11 @@
     .slider .slide .caption {
         margin-top: 20px;
         color: #EFF2FF;
+        line-height: 14px;
+    }
+
+    .services .slide-image img {
+        opacity: 0.2;
     }
 
     .quote-box {
@@ -336,6 +346,11 @@
     .slider .slide .caption {
         margin-top: 20px;
         color: #EFF2FF;
+        line-height: 14px;
+    }
+
+    .services .slide-image img {
+        opacity: 0.2;
     }
 
     .quote-box {
@@ -444,6 +459,11 @@
     .slider .slide .caption {
         margin-top: 20px;
         color: #EFF2FF;
+        line-height: 14px;
+    }
+
+    .services .slide-image img {
+        opacity: 0.2;
     }
 
     .quote-box {
@@ -552,6 +572,11 @@
     .slider .slide .caption {
         margin-top: 20px;
         color: #EFF2FF;
+        line-height: 14px;
+    }
+
+    .services .slide-image img {
+        /*opacity: 0.2;*/
     }
 
     .quote-box {
@@ -603,8 +628,8 @@
     }
 
     .slider .slide .title {
-        font-size: 6vw;
-        line-height: 56px;
+        font-size: 5vw;
+        line-height: 82px;
         color: #AFBCFF;
         -webkit-text-stroke: 0.5px #5A76AC;
     }
@@ -612,13 +637,18 @@
     .slider .slide .title-bold {
         display: block;
         color: #768BFF;
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     .slider .slide .caption {
         margin-top: 20px;
         color: #EFF2FF;
+        line-height: 14px;
     }      
+
+    .services .slide-image img {
+        /*opacity: 0.2;*/
+    }
 
     .contact .message {
         margin-top: 8%;

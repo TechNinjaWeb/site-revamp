@@ -64,8 +64,8 @@
 	                </div>
 	                <div class="caption">
 	                	You're a unique organization of ideas and motivations.
-	                	Our goal is to channel your essense into beautiful things
-	                	that grow your business.
+	                	<br/><br/>Our goal is to channel your essense into tools
+	                	that transform your business.
 	                </div>
 	            </div>
             </div>
@@ -121,7 +121,7 @@
 					        <div class="caption">
 					            We employ industry standards for any multimedia production you're
 					            planning. 
-					            <br><br>
+					            <br/><br/>
 					            Have us put something together for your next meetup
 					            or conference.
 					        </div>
@@ -135,8 +135,8 @@
 					        <div class="caption">
 					            Your business is a special part of who you are and
 					            your image is an important detail.
-					            <br><br>
-					            We build brands that resonate with you at it's core.
+					            <br/><br/>
+					            We build brands that resonate with you at the core.
 					        </div>
 					        <button class="learn-more">Learn More</button>
 					    </div>
@@ -147,7 +147,7 @@
 					        <div class="title">Web Development</div>
 					        <div class="caption">
 					            We use proven technologies to get the job done right the first time.
-					            <br><br>
+					            <br/><br/>
 					            From photo galleries to real time chat sites, we've got the right tools.
 					        </div>
 					        <button class="learn-more">Learn More</button>
@@ -159,9 +159,9 @@
 					        <div class="title">Smart Apps</div>
 					        <div class="caption">
 					            Both the world and your business is ever changing. 
-								<br><br>
+								<br/><br/>
 					            Smart apps give you the power to monitor your ROI while
-					            engaging retention and loyalty.
+					            engaging clients to produce retention and loyalty.
 					        </div>
 					        <button class="learn-more">Learn More</button>
 					    </div>
@@ -225,7 +225,7 @@
 				                }, nav)
 
 				                selectedClass = $(self).attr("data-rel"); 
-								console.log("Selected Class", selectedClass, $(self));
+								// console.log("Selected Class", selectedClass, $(self));
 						     	
 						     	$(".slides-container").fadeTo(time, 0.1, function(complete){
 						     		$(".services .slide").not("."+selectedClass).removeClass('active').addClass('hidden');
@@ -412,7 +412,7 @@
 				</script>
             </div>
         </div>
-        <div class="testimonials wrapper norm-shadow">
+        <!-- <div class="testimonials wrapper norm-shadow">
         	<div class="inner">
         		<span class="nav-left"><i class="fa fa-lg fa-chevron-circle-left"></i></span>
         		<ul class="testimonials-container list-unstyled">
@@ -522,7 +522,7 @@
 
 
         	</script>
-        </div>
+        </div> -->
         <div class="quotes wrapper">
             <a name="quotes-anchor"></a>
             <div class="inner">
@@ -743,7 +743,7 @@
         	</li>
         </ul>
         <div class="contact">
-        	<a name="contact-anchor"></a>
+        	<a href="#contact" name="contact-anchor"></a>
             <div class="inner">
             	<a class="no-style" href="#contact-anchor" onclick="scrollToAnchor('contact-anchor')">
 	            	<div class="special-title">
@@ -781,6 +781,9 @@
 			            		</i>
 			            	</button>
 			            </div>
+			            <span class="usage">
+			            	*To contact us, fill in the required fields in the mobile phone simulator and press the send button!
+			            </span>
 			            <script>
 			            	(function(){
 			            		var urls = {
