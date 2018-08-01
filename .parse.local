@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "crypto-data"
+    },
+    "crypto-data": {
+      "applicationId": "0QqRHBoBpImjf3jyNmZijW4ScVbBeKpKl4dPxYUw"
+    }
+  }
+}

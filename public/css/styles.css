@@ -2,6 +2,7 @@
 body {
     position: relative;
     width: 100%;
+    min-width: 350px;
     height: 100%;
     font-family: 'PT Sans', 'Helvetica', 'Arial';
     font-size: 20px;

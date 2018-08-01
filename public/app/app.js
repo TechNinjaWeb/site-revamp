@@ -18,7 +18,7 @@ var app = angular.module('app', [
     var self = this;
     var baseUrl = CONSTANTS.parseURL.custom;
 
-    var objectName = 'leads';
+    var objectName = 'Leads';
 
     self.readAll = function () {
         return $http({
@@ -81,22 +81,9 @@ var app = angular.module('app', [
 
     self.saveForm = function () {
         var inputs = getInputs();
-        /* $http({
-            method: 'POST',
-            url : baseUrl + objectName,
-            data: {
-                fullname: inputs[0],
-                email: inputs[1],
-                subject: inputs[2],
-                message: inputs[3]
-            },
-            params: {
-                returnObject: true
-            }
-        }).then(function(response) {
-            return response.data;
-        }); */
-        // Send inputs back
+        var l = new (Parse.Object.extend('Leads'))(data);
+        l.save(); //.then(()=>toastr.success("Thank You! We've Sent An Email To: " + email));
+        
         return inputs;
     };
 
@@ -119,24 +106,10 @@ var app = angular.module('app', [
         }, {});
 
         console.warn("Data", data);
-        // Set Users Email
-        // data.email = email;
-        // $http({
-        //     method: 'POST',
-        //     url: baseUrl + '/quotes?returnObject=true',
-        //     data: data
-        // }).success(function(res){
-        // 	console.log("Posted .. Toastr This", res);
-        // 	toastr.success("Thank You! We've Sent An Email To: " + email);
-        // }).error(function(err){
-        // 	console.warn(err);
-        // });
+        data.email = email;
 
-        var u = new (Parse.Objects.extend('Quotes'))(data);
-        u.save();
-        // Redundant return
-        // Debugging
-        // toastr.success("Thank You! We've Sent An Email To: " + email);
+        var u = new (Parse.Object.extend('Quotes'))(data);
+        u.save().then(()=>toastr.success("Thank You! We've Sent An Email To: " + email));
         return {email: email, quote: quote};
     };
 
