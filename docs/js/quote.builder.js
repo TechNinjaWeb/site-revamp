@@ -1,5 +1,6 @@
 (function(){
-    var timeout, output_color = $('.quote-box .output').css('color') || '#000',
+    var timeout, 
+        output_color = $('.quote-box .output').css('color') || '#000',
         priceMap = {
             'audio-samples': 50.00,
             'video-samples': 100.00,

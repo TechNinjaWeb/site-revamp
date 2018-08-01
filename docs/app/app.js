@@ -1,11 +1,14 @@
+Parse.initialize('p0dYyYK6mD2acO2KzwLBA9x5aQUAfsp5YE3zkMNk', '8jUv8QOggDFGcCAC27UhGuFQ08PPwOaTVjXNyYuK');
+Parse.serverURL = 'https://techninja.back4app.io';
+
 var app = angular.module('app', [
-		'backand', 
+		// 'backand', 
 		'auth.service',
 		'login.ctrl',
 		'ui.router',
 		'backend.constants'
 	])
-  .controller('main', function($scope, $http, Backand, CONSTANTS) {
+  .controller('main', function($scope, $http, CONSTANTS) {
   	window.http = $http;
     $http.defaults.headers.common.anonymousToken = CONSTANTS.anonymousToken;
 
@@ -13,7 +16,7 @@ var app = angular.module('app', [
     $scope.appCtrl = $scope;
 
     var self = this;
-    var baseUrl = Backand.getApiUrl() + '/1/objects/';
+    var baseUrl = CONSTANTS.parseURL.custom;
 
     var objectName = 'leads';
 
@@ -68,11 +71,12 @@ var app = angular.module('app', [
     };
 
     self.signin = function (username, password) {
-        return Backand.signin(username, password)
-            .then(function (response) {
-                loadUserDetails();
-                return response;
-            });
+        return console.log("Backand was replaced and needs rebuilding");
+        // return Backand.signin(username, password)
+        //     .then(function (response) {
+        //         loadUserDetails();
+        //         return response;
+        //     });
     };
 
     self.saveForm = function () {
@@ -116,10 +120,10 @@ var app = angular.module('app', [
 
         console.warn("Data", data);
         // Set Users Email
-        data.email = email;
+        // data.email = email;
         // $http({
         //     method: 'POST',
-        //     url: Backand.getApiUrl() + '/1/objects/quotes?returnObject=true',
+        //     url: baseUrl + '/quotes?returnObject=true',
         //     data: data
         // }).success(function(res){
         // 	console.log("Posted .. Toastr This", res);
@@ -127,9 +131,12 @@ var app = angular.module('app', [
         // }).error(function(err){
         // 	console.warn(err);
         // });
+
+        var u = new (Parse.Objects.extend('Quotes'))(data);
+        u.save();
         // Redundant return
         // Debugging
-        toastr.success("Thank You! We've Sent An Email To: " + email);
+        // toastr.success("Thank You! We've Sent An Email To: " + email);
         return {email: email, quote: quote};
     };
 
@@ -140,12 +147,12 @@ var app = angular.module('app', [
     angular.extend($scope, self);
   });
 
-app.config(function($stateProvider, $urlRouterProvider, BackandProvider, CONSTANTS) {
-	BackandProvider.setAppName(CONSTANTS.appname);
-	BackandProvider.setSignUpToken(CONSTANTS.signupToken);
-	BackandProvider.setAnonymousToken(CONSTANTS.annonymousToken);
+app.config(function($stateProvider, $urlRouterProvider, CONSTANTS) {
+	// BackandProvider.setAppName(CONSTANTS.appname);
+	// BackandProvider.setSignUpToken(CONSTANTS.signupToken);
+	// BackandProvider.setAnonymousToken(CONSTANTS.annonymousToken);
 
-	BackandProvider.runSigninAfterSignup(true);
+	// BackandProvider.runSigninAfterSignup(true);
 
 	// $stateProvider.state('home', {
 	// 	abstract: true,
@@ -176,10 +183,10 @@ app.config(function($stateProvider, $urlRouterProvider, BackandProvider, CONSTAN
 	$urlRouterProvider.otherwise('/');
 });
 
-app.run(function($rootScope, Backand, AuthService){
+app.run(function($rootScope, AuthService){
 	// console.log("App Running", $rootScope);
 
-	window.BackAnd = Backand;
+	// window.BackAnd = Backand;
 	window.AuthService = AuthService;
 })
 angular.bootstrap(document, [app.name]);
