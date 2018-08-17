@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: tech-ninja.herokuapp.com
+Token: 1fa9b857f8b6270f0eb4c1a9b59707a2f26ab47f29e155325177cd5712d6ab1e

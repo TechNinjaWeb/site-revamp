@@ -67,6 +67,7 @@
                 // console.info("Sending Info", email);
                 // Get Quote Form
                 var form = getInputs();
+                    form.push({name: 'price', value: getPrice()});
                 // console.log("Sending Quote", form);
                 // Get Angular Element
                 var element = angular.element('.sendQuoteBtn');

@@ -20,7 +20,9 @@ var isAuthed = (user)=>{
 	return queryRole.first();
 }
 
-Parse.Cloud.afterSave("Quote", function(request, response) {
+console.log("Entered Main.JS in Cloud folder");
+
+Parse.Cloud.afterSave("Quotes", function(request, response) { 
 	var quote = request.object;
 	console.log("After Save: ", quote.get('email'), quote);
 
@@ -52,7 +54,7 @@ Parse.Cloud.afterSave("Quote", function(request, response) {
   	var email_data = {
 	  	from: 'Tech Ninja | Web &amp; IT <no-reply@mailgun.tech-ninja.ca>',
 	  	to: email,
-	  	subject: 'Thank You For Your Interest in Tech Ninja | Web &amp; IT',
+	  	subject: 'Thank You For Your Interest in Tech Ninja | Web & IT',
 	  	text: require('./thank-you-template.js').text,
 	  	'recipient-variables': JSON.stringify(recipientVars),
 		html: require('./thank-you-template.js').html

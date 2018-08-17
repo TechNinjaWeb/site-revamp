@@ -1,6 +1,6 @@
 Parse.initialize('p0dYyYK6mD2acO2KzwLBA9x5aQUAfsp5YE3zkMNk', '8jUv8QOggDFGcCAC27UhGuFQ08PPwOaTVjXNyYuK');
 Parse.serverURL = 'https://techninja.back4app.io';
-
+let q;
 var app = angular.module('app', [
 		// 'backand', 
 		'auth.service',
@@ -105,11 +105,12 @@ var app = angular.module('app', [
         	return o;
         }, {});
 
-        console.warn("Data", data);
         data.email = email;
+        q = quote;
+        console.warn("Data", data);
 
-        var u = new (Parse.Object.extend('Quotes'))(data);
-        u.save().then(()=>toastr.success("Thank You! We've Sent An Email To: " + email));
+        // var u = new (Parse.Object.extend('Quotes'))(data);
+        // u.save().then(()=>toastr.success("Thank You! We've Sent An Email To: " + email));
         return {email: email, quote: quote};
     };
 

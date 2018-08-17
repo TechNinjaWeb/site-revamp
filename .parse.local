@@ -1,10 +1,10 @@
 {
   "applications": {
     "_default": {
-      "link": "crypto-data"
+      "link": "techninja"
     },
-    "crypto-data": {
-      "applicationId": "0QqRHBoBpImjf3jyNmZijW4ScVbBeKpKl4dPxYUw"
+    "techninja": {
+      "applicationId": "p0dYyYK6mD2acO2KzwLBA9x5aQUAfsp5YE3zkMNk"
     }
   }
 }
